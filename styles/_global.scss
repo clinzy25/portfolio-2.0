@@ -8,5 +8,10 @@ body {
     margin: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: [navbar] 75px [intro-pragraph] 600px [skills] 400px;
+    grid-template-rows: [intro-paragraph] 100vh [skills] 100vh [paradigms] 100vh [projects] 100vh
+    [contact footer] 100vh;
+}
+
+.link-target {
+  height: 0;
 }

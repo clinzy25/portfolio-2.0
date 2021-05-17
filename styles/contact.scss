@@ -1,0 +1,12 @@
+@import './_mixins';
+
+.contact {
+    @include flexCenter();
+    grid-area: 5 / 1 / 5 / 2;
+    flex-direction: column;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}

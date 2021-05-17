@@ -1,0 +1,12 @@
+@import './_mixins';
+
+.about-container {
+  grid-area: 1 / 1 / 2 / 2;
+  @include flexCenter();
+  border-bottom: 1px solid black;
+  
+}
+
+.about {
+  width: 50%;
+}
