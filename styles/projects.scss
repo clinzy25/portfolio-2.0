@@ -1,22 +1,44 @@
 .projects {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    flex-grow: 1;
+    border-bottom: 1px solid black;
 }
 
 .project {
-  display: flex;
+    display: flex;
+    border: 1px solid black;
+}
+
+.time-blocker {
+    // background-image: url('./images/time-blocker.jpg');
+    // background-color: black;
+}
+
+.project-header {
+    font-family: 'Roboto Mono', monospace;
 }
 
 .project-image {
-  height: 200px;
-  width: 250px;
+    height: 200px;
+    width: 250px;
 }
 
 .project-info {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
+.project-link {
+    text-decoration: none;
+    padding: 0 10px;
+    color: black;
+    border-left: 2px solid black;
+}
+
+.no-border {
+    border: 0;
+}
