@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.left-side-nav {
+  display: flex;
+  align-items: center;
+
+}
+.right-side-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-link {
+  padding: 0 20px;
+}
