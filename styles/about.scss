@@ -1,12 +1,42 @@
 @import './_mixins';
 
 .about-container {
-  grid-area: 1 / 1 / 2 / 2;
-  @include flexCenter();
-  border-bottom: 1px solid black;
-  
+    @include flexCenter();
+    border-bottom: 1px solid black;
+    width: 100vw;
+    flex-direction: column;
 }
 
 .about {
-  width: 50%;
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+}
+
+.hello-container {
+    position: absolute;
+    left: 5%;
+    font-size: 8rem;
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(0, 0, 0, 0.103);
+    z-index: -1;
+    white-space: nowrap;
+    line-height: 500px;
+}
+
+.name {
+    font-family: 'Noto Sans SC', sans-serif;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 800px) {
+    .about {
+        width: 75%;
+        font-size: 1.2rem;
+    }
+    .hello,
+    .hello-end {
+        font-size: 6rem;
+        letter-spacing: -10px;
+    }
 }

@@ -1,5 +1,20 @@
+
 .skills-container {
-  display: flex;
-  flex-flow: column;
-  border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    font-family: 'Roboto Mono', monospace;
+    border-bottom: 1px solid black;
+}
+
+.fab,
+.fas {
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.589);
+}
+
+.skill-category {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
