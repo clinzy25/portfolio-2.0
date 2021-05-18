@@ -1,12 +1,83 @@
 @import './_mixins';
 
-.contact {
+#contact-container {
     @include flexCenter();
-    grid-area: 5 / 1 / 5 / 2;
+    grid-area: 4 / 1 / 4 / 2;
     flex-direction: column;
 }
 
 #contact-form {
     display: flex;
     flex-direction: column;
+    width: 40%;
+    height: 500px;
+    margin-top: 25px;
+}
+
+.form-header {
+    font-size: 2rem;
+    margin: 0 25px 25px 25px;
+    text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.fab {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.fa-github {
+  color: #D6D8DA;
+  margin-left: 15px;
+}
+
+.fa-linkedin {
+  color: #0966C2;
+}
+
+.social-hr {
+  display: inline;
+  height: 1px;
+  background-color: black;
+  width: 20vw;
+  max-width: 220px;
+  border:0;
+}
+
+.form-input,
+.text-area {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.form-input {
+    height: 30px;
+}
+
+.text-area {
+    height: 200px;
+    resize: none;
+}
+
+.form-label {
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn {
+    align-self: center;
+    margin-top: 25px;
+    padding: 15px;
+    width: 125px;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
+}
+
+@media only screen and (max-width: 800px) {
+    #contact-form {
+        width: 85%;
+    }
 }

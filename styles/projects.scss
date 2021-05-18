@@ -1,9 +1,7 @@
 .projects {
-    margin: 0 4em 4em 4em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 200px auto;
-    border-bottom: 1px solid black;
 }
 
 .project-header {
@@ -12,12 +10,12 @@
 
 .project {
     position: relative;
-    margin: 1em;
+    margin: 25px;
     max-height: 400px;
     overflow: hidden;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
-    border-radius: 10px;
+    border-radius: 5px;
 
     &::before,
     &::after {
@@ -123,6 +121,7 @@
         padding-top: 0px;
     }
     .project-header {
+        font-size: 3.5rem;
         grid-area: 1 / 1 / 2 / span 2;
     }
 }
@@ -130,7 +129,6 @@
 @media only screen and (max-width: 1000px) {
     .projects {
         grid-template-columns: 1fr;
-        margin: 0 2em 2em 2em;
     }
     .project-header {
         grid-area: 1 / 1 / 2 / span 1;
