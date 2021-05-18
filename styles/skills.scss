@@ -1,21 +1,28 @@
+#skills {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
 
-.skills-container {
+.education-experience-skills {
     display: flex;
+    flex-flow: wrap;
     justify-content: center;
-    justify-content: space-around;
+}
+
+.skill-section {
+    width: 400px;
+}
+
+.skill-header,
+h3,
+h5 {
     font-family: 'Roboto Mono', monospace;
-    border-bottom: 1px solid black;
-    flex-direction: column;
 }
 
-.fab,
-.fas {
-    font-size: 3rem;
-    color: rgba(0, 0, 0, 0.589);
+h4 {
+  margin: 5px 0;
 }
 
-.skill-category {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+li {
+    list-style-type: circle;
 }

@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows:
-        [intro-paragraph] 100vh [skills] 100vh [projects] 1fr
+        [about] 100vh [skills] 100vh [projects] 1fr
         [contact footer] 100vh;
     // overflow-x: hidden;
 }
