@@ -36,7 +36,8 @@ h4 {
     flex-wrap: wrap;
     background: #efefef;
     box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
-    margin-top: 100px;
+    margin: 100px 0;
+    width: 100%;
 }
 
 .radio {
@@ -84,7 +85,7 @@ h4 {
 }
 
 @media (min-width: 800px) {
-    .tabs {
+    .tabs-container {
       width: 75%;
     }
     .label {

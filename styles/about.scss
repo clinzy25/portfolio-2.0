@@ -1,9 +1,9 @@
 @import './_mixins';
+@import './variables';
 
 .about-container {
     @include flexCenter();
     border-bottom: 1px solid black;
-    flex-direction: column;
 }
 
 .about {
@@ -14,7 +14,8 @@
 
 .hello-container {
     position: absolute;
-    left: 5%;
+    left: 0;
+    margin: $globalMargin;
     font-size: 8rem;
     font-family: 'Roboto Mono', monospace;
     color: rgba(0, 0, 0, 0.103);
@@ -31,7 +32,7 @@
 @media only screen and (max-width: 800px) {
     .about {
         width: 75%;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .hello,
     .hello-end {

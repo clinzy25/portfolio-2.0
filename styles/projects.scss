@@ -1,17 +1,20 @@
+@import './_variables';
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px auto;
+    grid-template-rows: [header] 200px auto;
 }
 
 .project-header {
     grid-area: 1 / 1 / 2 / span 3;
+    margin: $globalMargin;
 }
 
 .project {
     position: relative;
-    margin: 25px;
-    max-height: 400px;
+    margin: $globalMargin;
+    max-height: 500px;
     overflow: hidden;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
@@ -48,20 +51,18 @@
     &:hover::after {
         transform: scale(1, 1);
     }
+    &:hover {
+        .project-image {
+            transform: scale(1.1);
+            filter: blur(2px) brightness(0.4);
+        }
+    }
 }
 
 .project-image {
     max-width: 150%;
     display: block;
-    transition: opacity ease-out 250ms;
     transition: transform ease-out 250ms;
-}
-
-.project:hover {
-    .project-image {
-        filter: blur(2px) brightness(0.4);
-        transform: scale(1.1);
-    }
 }
 
 .project-text {
@@ -121,7 +122,6 @@
         padding-top: 0px;
     }
     .project-header {
-        font-size: 3.5rem;
         grid-area: 1 / 1 / 2 / span 2;
     }
 }
@@ -131,6 +131,7 @@
         grid-template-columns: 1fr;
     }
     .project-header {
+        font-size: 3.5rem;
         grid-area: 1 / 1 / 2 / span 1;
     }
 }

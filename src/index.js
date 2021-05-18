@@ -11,7 +11,19 @@ menuBars.addEventListener('click', () => {
 
 navLink.forEach((link) => {
     link.addEventListener('click', () => {
-        navbar.classList.toggle('visibility');
-        menuBars.classList.toggle('change');
+        if (window.innerWidth <= 800) {
+            navbar.classList.toggle('visibility');
+            menuBars.classList.toggle('change');
+        }
     });
+});
+
+let prev = 0;
+window.addEventListener('scroll', () => {
+  console.log(window.innerWidth)
+    let scrollTop = window.scrollY;
+    if (scrollTop - prev < 100) {
+        navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
+      }
+      prev = scrollTop;
 });
