@@ -1,6 +1,12 @@
+@import './_mixins';
+
 #skills {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
+    margin: 100px 0;
 }
 
 .education-experience-skills {
@@ -20,9 +26,75 @@ h5 {
 }
 
 h4 {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 li {
     list-style-type: circle;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+
+.input:checked + .label + .panel {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .label {
+    width: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .panel {
+    order: 99;
+  }
 }
