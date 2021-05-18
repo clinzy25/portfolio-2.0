@@ -3,14 +3,13 @@
 .about-container {
     @include flexCenter();
     border-bottom: 1px solid black;
-    width: 100vw;
     flex-direction: column;
 }
 
 .about {
     width: 50%;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .hello-container {

@@ -1,44 +1,138 @@
 .projects {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-between;
-    flex-grow: 1;
+    margin: 0 4em 4em 4em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px auto;
     border-bottom: 1px solid black;
 }
 
-.project {
-    display: flex;
-    border: 1px solid black;
-}
-
-.time-blocker {
-    // background-image: url('./images/time-blocker.jpg');
-    // background-color: black;
-}
-
 .project-header {
-    font-family: 'Roboto Mono', monospace;
+    grid-area: 1 / 1 / 2 / span 3;
+}
+
+.project {
+    position: relative;
+    margin: 1em;
+    max-height: 400px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
+    border-radius: 10px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 1.25em;
+        bottom: 1.25em;
+        left: 1.25em;
+        right: 1.25em;
+        opacity: 1;
+        transition: transform ease-out 250ms;
+    }
+
+    &::before {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        transform: scale(0, 1);
+    }
+
+    &::after {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        transform: scale(1, 0);
+    }
+
+    &:hover::before {
+        transform: scale(1, 1);
+    }
+
+    &:hover::after {
+        transform: scale(1, 1);
+    }
 }
 
 .project-image {
-    height: 200px;
-    width: 250px;
+    max-width: 150%;
+    display: block;
+    transition: opacity ease-out 250ms;
+    transition: transform ease-out 250ms;
 }
 
-.project-info {
-    display: flex;
-    flex-direction: column;
+.project:hover {
+    .project-image {
+        filter: blur(2px) brightness(0.4);
+        transform: scale(1.1);
+    }
+}
+
+.project-text {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
     font-family: 'Poppins', sans-serif;
+    transition: opacity ease-out 250ms;
+    letter-spacing: 1px;
+    hr {
+        width: 30%;
+    }
+}
+
+.project-links {
+    padding-top: 40px;
+    transition: transform ease-out 250ms;
+    :hover {
+        color: dodgerblue;
+    }
 }
 
 .project-link {
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
     text-decoration: none;
     padding: 0 10px;
-    color: black;
-    border-left: 2px solid black;
+    color: white;
+    border-left: 2px solid white;
 }
 
 .no-border {
     border: 0;
+}
+
+.project:hover .project-text {
+    opacity: 1;
+}
+
+.project-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1600px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project-links {
+        padding-top: 0px;
+    }
+    .project-header {
+        grid-area: 1 / 1 / 2 / span 2;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .projects {
+        grid-template-columns: 1fr;
+        margin: 0 2em 2em 2em;
+    }
+    .project-header {
+        grid-area: 1 / 1 / 2 / span 1;
+    }
 }
