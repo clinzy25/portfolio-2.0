@@ -24,17 +24,11 @@
     padding: 10px;
 }
 
-.left-side-nav {
-    display: flex;
-}
-
-.right-side-nav {
+.accessibility {
     margin: $globalMargin;
-    .accessibility {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-links-container {
@@ -52,7 +46,6 @@
     padding: 0 15px;
     border-left: 2px solid black;
 }
-
 
 // Mobile
 .menu-bars {
@@ -106,8 +99,8 @@
         visibility: hidden;
         background-color: dodgerblue;
     }
-    
-    .right-side-nav {
+
+    .accessibility {
         visibility: visible;
         position: absolute;
         right: 1rem;
@@ -117,10 +110,6 @@
         margin: 5px;
         background-color: dodgerblue;
         border-radius: 25px;
-    }
-    
-    .left-side-nav {
-        flex-direction: column;
     }
 
     .nav-links-container {
@@ -137,7 +126,6 @@
         padding: 50px 0;
     }
 
-
     .visibility {
         visibility: visible !important;
         top: 100vh;
@@ -145,7 +133,7 @@
         #logo {
             visibility: hidden;
         }
-        .right-side-nav {
+        .accessibility {
             visibility: hidden;
         }
     }
