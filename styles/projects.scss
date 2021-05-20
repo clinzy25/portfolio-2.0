@@ -4,11 +4,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: [header] 200px auto;
+    padding-top: 75px;
 }
 
 .project-header {
     grid-area: 1 / 1 / 2 / span 3;
     margin: $globalMargin;
+    color: $accent1;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3rem;
 }
 
 .project {
@@ -34,14 +38,14 @@
     }
 
     &::before {
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        border-top: 1px solid $mainTextColor;
+        border-bottom: 1px solid $mainTextColor;
         transform: scale(0, 1);
     }
 
     &::after {
-        border-left: 1px solid white;
-        border-right: 1px solid white;
+        border-left: 1px solid $mainTextColor;
+        border-right: 1px solid $mainTextColor;
         transform: scale(1, 0);
     }
 
@@ -55,7 +59,7 @@
     &:hover {
         .project-image {
             transform: scale(1.1);
-            filter: blur(2px) brightness(0.5);
+            filter: blur(2px) brightness(0.4);
         }
     }
 }
@@ -66,6 +70,13 @@
     transition: transform ease-out 250ms;
 }
 
+.project-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    color: $mainTextColor;
+    margin-bottom: 0;
+}
+
 .project-text {
     z-index: 3;
     position: absolute;
@@ -73,13 +84,14 @@
     left: 50%;
     width: 75%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: $mainTextColor;
     opacity: 0;
     font-family: 'Poppins', sans-serif;
     transition: opacity ease-out 250ms;
     letter-spacing: 1px;
     hr {
         width: 30%;
+        border-color: $accent1;
     }
 }
 
@@ -87,17 +99,29 @@
     padding-top: 40px;
     transition: transform ease-out 250ms;
     :hover {
-        color: dodgerblue;
+        color: $accent1;
     }
 }
 
-.project-link {
+.project-btn {
     font-family: 'Roboto Mono', monospace;
     cursor: pointer;
     text-decoration: none;
-    padding: 0 10px;
-    color: white;
-    border-left: 2px solid white;
+    background: transparent;
+    padding: 5px 50px;
+    color: $mainTextColor;
+    font-size: $smallText;
+    border: 1px solid $mainTextColor;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+    margin: 5px;
+    transition: transform 0.1s;
+    &:hover,
+    &:focus,
+    &:active {
+        background: $accent1;
+        color: #000;
+        transition: all 0.2s ease-in;
+    }
 }
 
 .no-border {
@@ -108,20 +132,11 @@
     opacity: 1;
 }
 
-.project-title {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 0;
-}
-
 @media only screen and (max-width: 1500px) {
     #projects {
         grid-template-columns: repeat(2, 1fr);
     }
-    .project-links {
-        padding-top: 0px;
-    }
+
     .project-header {
         grid-area: 1 / 1 / 2 / span 2;
     }
@@ -131,8 +146,13 @@
     #projects {
         grid-template-columns: 1fr;
     }
+
     .project-header {
         font-size: 3.5rem;
         grid-area: 1 / 1 / 2 / span 1;
+    }
+
+    .project-links {
+        padding-top: 0px;
     }
 }

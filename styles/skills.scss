@@ -2,6 +2,7 @@
 @import './variables';
 
 #skills {
+    padding-top: 75px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -22,31 +23,29 @@
     max-width: 400px;
     height: min-content;
     padding-left: 20px;
-    border-left: 1px solid black;
+    border-left: 1px solid $mainTextColor;
 }
 
-.skill-section > .skill-header,
-h3,
+.skill-section,
 h5,
 h4 {
     font-family: 'Roboto Mono', monospace;
+    color: $secondaryTextColor;
     h3 {
         font-size: $mediumHeader;
+        color: $mainTextColor;
     }
     h4 {
         font-size: $default;
+        margin: 15px 0 0 0;
     }
     h5 {
         font-size: $smallHeader;
+        margin: 5px 0;
     }
-}
-
-.skill-section > h5 {
-    margin: 5px 0;
-}
-
-.skill-section > h4 {
-    margin: 15px 0 0 0;
+    .skill-text {
+        font-family: 'Poppins', sans-serif;
+    }
 }
 
 .header-container {
@@ -58,21 +57,31 @@ h4 {
 .fas {
     font-size: $largeIcon;
     padding-right: 15px;
+    color: $accent1;
 }
 
 .skill-text {
     font-size: $smallText;
+    color: $mainTextColor;
     margin: 5px 0;
+    color: $mainTextColor;
 }
 
 .tabs-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: #efefef;
-    box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
+    background-color: $mainBackground;
+    box-shadow: 0 50px 50px $black;
     margin: 100px 0;
     width: 100%;
     max-width: 900px;
+    color: $secondaryTextColor;
+}
+
+.panel {
+    display: none;
+    padding: 20px 30px 30px;
+    background-color: $mainBackground;
 }
 
 .paradigm-text {
@@ -88,20 +97,20 @@ h4 {
 .label {
     width: 100%;
     padding: 20px 30px;
-    background-color: #e5e5e5;
+    background-color: $black;
     cursor: pointer;
     font-size: $mediumHeader;
     font-family: 'Roboto Mono', monospace;
-    color: #7f7f7f;
+    color: $secondaryTextColor;
     transition: background-color 0.1s, color 0.1s;
 }
 
 .label:hover {
-    background-color: #d8d8d8;
+    color:$accent2;
 }
 
 .label:active {
-    background-color: #ccc;
+    background-color: rgb(68, 68, 68);
 }
 
 .radio:focus + .label {
@@ -109,14 +118,8 @@ h4 {
 }
 
 .radio:checked + .label {
-    background-color: rgb(138, 138, 138);
-    color: #000;
-}
-
-.panel {
-    display: none;
-    padding: 20px 30px 30px;
-    background-color: #fff;
+    background-color: #2e2e2e;
+    color: $accent1;
 }
 
 .radio:checked + .label + .panel {

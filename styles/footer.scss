@@ -2,16 +2,14 @@
 @import './_variables';
 
 #footer {
-    // grid-area: 4 / 1 / 4 / 2;
-    align-self: flex-end;
     @include flexCenter();
+    align-self: flex-end;
     height: 75px;
-    border-top: 1px solid black;
+    background-color: $black;
 }
 
 .footer-text {
     font-family: 'Poppins', sans-serif;
     font-size: $smallText;
+    color: $secondaryTextColor;
 }
-
-

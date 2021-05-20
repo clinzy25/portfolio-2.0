@@ -3,6 +3,7 @@ import '../styles/index.scss';
 const menuBars = document.querySelector('.menu-bars');
 const navbar = document.querySelector('#navbar');
 const navLink = document.querySelectorAll('.nav-link');
+const border = document.querySelector('.border');
 
 AOS.init({
     delay: 100, // values from 0 to 3000, with step 50ms
@@ -14,6 +15,10 @@ AOS.init({
 menuBars.addEventListener('click', () => {
     menuBars.classList.toggle('change');
     navbar.classList.toggle('visibility');
+    /** Reset mobile nav animation */
+    border.style.animation = 'none';
+    border.offsetHeight; /* trigger reflow */
+    border.style.animation = null;
 });
 
 let recentClick = false;

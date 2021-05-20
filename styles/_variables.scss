@@ -10,8 +10,15 @@ $default: 1rem;
 $largeIcon: 2rem;
 $smallIcon: 1.2rem;
 
-// Background Colors
-$mainBackground: rgb(37, 37, 37);
+// Content Colors
+$mainBackground: rgb(24, 24, 24);
+$secondaryBackground: rgb(158, 158, 158);
+$black: rgb(10, 10, 10);
+$shadowColor: rgba(0, 0, 0, 0.445);
 
-// Text Colors
-$mainText: whitesmoke;
+// Dark Text Colors
+$mainTextColor: whitesmoke;
+$secondaryTextColor: rgb(157, 165, 180);
+$accent1: rgba(109, 214, 155, 90%);
+// #6DD69B
+$accent2: #6CACCB;
