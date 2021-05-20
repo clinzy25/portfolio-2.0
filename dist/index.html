@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <title>Conner Linzy</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav id="navbar">
+            <div class="menu-bars" id="menu-bars">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul class="nav-links-container">
+                <img id="logo" src="./images/logo-white.png" alt="Logo" />
+                <li class="nav-link no-border">
+                    <a href="#about">About</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#contact">Contact</a>
+                </li>
+                <div class="border"></div>
+            </ul>
+            <!-- <div id="wcb" class="carbonbadge wcb-d"></div> -->
+            <div class="dropdown-container">
+                <span class="accessibility">Accessibility</span>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="dark-mode">
+                            <i class="fas fa-lightbulb"></i></i>Dark Mode Toggle
+                        </li>
+                        <li class="font-inc">
+                            <i class="fas fa-plus"></i>Increase Font Size
+                        </li>
+                        <li class="font-dec">
+                            <i class="fas fa-minus"></i>Decrease Font Size
+                        </li>
+                        <li class="grayscale">
+                            <i class="fas fa-palette"></i>Grayscale
+                        </li>
+                        <li class="high-contrast">
+                            <i class="fas fa-adjust"></i>High Contrast
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About -->
+        <section id="about">
+          <div class="about-image"></div>
+            <div class="hello-container" data-aos="fade-right">
+                <h1 class="hello">hello {</h1>
+                <h1 class="hello-end">}</h1>
+            </div>
+            <p class="about-text">
+                My name is <span class="name">CONNER <b>LINZY</b></span
+                >. I'm a web developer based in Charlotte, NC. I specialize in
+                lightweight, scalable front-end architecture with the React
+                framework. I strive to create regenerative technology that helps
+                people and solves real problems.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <div class="education-experience-skills">
+                <div class="dot"></div>
+                <div class="skill-section education" data-aos="fade-zoom-in">
+                    <div class="header-container">
+                        <i class="fas fa-book-open"></i>
+                        <h3 class="skill-header">Education</h3>
+                    </div>
+                    <h5>Western Governors University</h5>
+                    <span class="skill-text">Software Development Program</span>
+                    <h5>Eastern Florida State College</h5>
+                    <span class="skill-text">Associates Degree</span>
+                    <h4>Certifications</h4>
+                    <p class="skill-text">
+                        CompTIA A+ | ITIL Foundation Level | CIW UI Designer |
+                        CIW Site Dev Associate
+                    </p>
+                </div>
+
+                <div class="skill-section skills" data-aos="fade-zoom-in">
+                    <div class="header-container">
+                        <i class="fas fa-toolbox"></i>
+                        <h3 class="skill-header">Skills</h3>
+                    </div>
+                    <h5>Frontend</h5>
+                    <p class="skill-text">
+                        HTML | CSS | Javascript | React | Redux | UI / UX | SCSS
+                        | Styled Components | Bootstrap | Tailwind/Chakra
+                    </p>
+                    <h5>Backend</h5>
+                    <p class="skill-text">
+                        PostgreSQL | PgAdmin | PHP | Serverless | Stripe | Auth0
+                    </p>
+                    <h5>Build Tools</h5>
+                    <p class="skill-text">
+                        Git / Github | NPM | Webpack | JSDoc | Typescript |
+                        ESLint
+                    </p>
+                    <h5>Soft Skills</h5>
+                    <p class="skill-text">
+                        General Management | Client Relations | Project Planning
+                    </p>
+                </div>
+
+                <div class="skill-section exerience" data-aos="fade-zoom-in">
+                    <div class="header-container">
+                        <i class="fas fa-shoe-prints"></i>
+                        <h3 class="skill-header">Experience</h3>
+                    </div>
+                    <h5>Supervisor | Electrician | Centrifugal Pump Repair</h5>
+                    <span class="skill-text">BlueH2O Irrigation</span>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-container" data-aos="fade-zoom-in">
+                <input
+                    name="tabs"
+                    type="radio"
+                    id="tab-1"
+                    checked="checked"
+                    class="radio"
+                />
+                <label for="tab-1" class="label">Sustainable Design</label>
+                <div class="panel">
+                    <p class="paradigm-text">
+                        From loading a web page to sending an IM, every action
+                        on the web requires energy. If the internet were a
+                        country, it will to rank #4 in the world for its rate of
+                        emissions by 2025. In light of the climate crisis, we
+                        must design products that are <b>future-friendly</b>,
+                        and do not consume resources unnecessarily. Writing
+                        performant code, thoughtfully using images and videos,
+                        and selecting green hosting services are the most
+                        impactful things web developers can do to shift toward a
+                        regenerative web and a clean earth for future
+                        generations.
+                    </p>
+                </div>
+
+                <input name="tabs" type="radio" id="tab-2" class="radio" />
+                <label for="tab-2" class="label">Humane Design</label>
+                <div class="panel">
+                    <p class="paradigm-text">
+                        Creating technologies that are
+                        <b>sensitive to human nature</b>, and do not try to
+                        exploit, addict, or manipulate users. Psychological
+                        factors in UX should be considered to ensure products
+                        promote a healthy mind and a sense of well-being.
+                        Additionally, our information infrastucture and public
+                        discourse is now shaped by the internet, and it's our
+                        responsibility to make products that are
+                        <b>inherently good for society</b>, and do not
+                        inadvertently divide, outrage, or misinform.
+                    </p>
+                </div>
+
+                <input name="tabs" type="radio" id="tab-3" class="radio" />
+                <label for="tab-3" class="label">Accessible Design</label>
+                <div class="panel">
+                    <p class="paradigm-text">
+                        Creating technologies at are available to all people,
+                        regardless of their hardware, language, location, or
+                        abilities. Web developers can maintain the inclusive
+                        culture of the internet by focusing on, above all, a
+                        <b>high quality user experience</b> that adheres to
+                        responsive design, internationalization, and W3C
+                        standards.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+          <div class="projects-header-image"></div>
+            <h1 class="project-header">Projects</h1>
+            <div class="project" data-aos="zoom-in">
+                <img
+                    class="project-image"
+                    src="./images/time-blocker.jpg"
+                    alt="Time Blocker Project"
+                />
+                <div class="project-text">
+                    <h3 class="project-title">Time Blocker</h3>
+                    <hr />
+                    <p class="project-body">
+                        A web-based time block planner made with React,
+                        useReducer, and Context API.
+                    </p>
+                    <div class="project-links">
+                        <a
+                            target="_blank"
+                            class="project-link no-border"
+                            href="https://time-blocker.netlify.app/"
+                            ><button class="project-btn">Live</button></a
+                        >
+                        <a
+                            target="_blank"
+                            class="project-link"
+                            href="https://github.com/clinzy25/time-blocker"
+                        >
+                            <button class="project-btn">Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in">
+                <img
+                    class="project-image"
+                    src="./images/ecommerce.jpg"
+                    alt="Ecommerce Project"
+                />
+                <div class="project-text">
+                    <h3 class="project-title">Ecommerce Site</h3>
+                    <hr />
+                    <p class="project-body">
+                        A generic ecommerce site with Stipe payments and
+                        serverless functions. Redux and useReducer variants.
+                    </p>
+                    <div class="project-links">
+                        <a
+                            target="_blank"
+                            class="project-link no-border"
+                            href="https://comfy-sloth-cl.netlify.app/"
+                            ><button class="project-btn">Live</button></a
+                        >
+                        <a
+                            target="_blank"
+                            class="project-link"
+                            href="https://github.com/clinzy25/react-ecommerce-site"
+                            ><button class="project-btn">Code</button></a
+                        >
+                        <a
+                            target="_blank"
+                            class="project-link"
+                            href="https://github.com/clinzy25/react-ecommerce-site"
+                            ><button class="project-btn">Redux Code</button></a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in">
+                <img
+                    class="project-image"
+                    src="./images/github.jpg"
+                    alt="Github Search User Project"
+                />
+                <div class="project-text">
+                    <h3 class="project-title">Github User Search</h3>
+                    <hr />
+                    <p class="project-body">
+                        An app that uses the Github API to search for users and
+                        aggregates data onto Fusion Charts.
+                    </p>
+                    <div class="project-links">
+                        <a
+                            target="_blank"
+                            class="project-link no-border"
+                            href="https://search-github-users-cl.netlify.app/"
+                            ><button class="project-btn">Live</button></a
+                        >
+                        <a
+                            target="_blank"
+                            class="project-link"
+                            href="https://github.com/clinzy25/react-search-github-users"
+                            ><button class="project-btn">Code</button></a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in">
+                <img
+                    class="project-image"
+                    src="./images/small-web-projects.jpg"
+                    alt="Small Web Projects"
+                />
+                <div class="project-text">
+                    <h3 class="project-title">Small Web Projects</h3>
+                    <hr />
+                    <p class="project-body">
+                        A collection of small scale vanilla Javascript projects
+                    </p>
+                    <div class="project-links">
+                        <a
+                            target="_blank"
+                            class="project-link no-border"
+                            href="https://clinzy25.github.io/small-web-projects/"
+                            ><button class="project-btn">Live</button></a
+                        >
+                        <a
+                            target="_blank"
+                            class="project-link"
+                            href="https://github.com/clinzy25/small-web-projects"
+                            ><button class="project-btn">Code</button></a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in">
+                <img
+                    class="project-image"
+                    src="./images/exercism.png"
+                    alt="Exercism Exercises"
+                />
+                <div class="project-text">
+                    <h3 class="project-title">Exercism Exercises</h3>
+                    <hr />
+                    <p class="project-body">
+                        My solutions to the Exercism Javascript Track
+                    </p>
+                    <div class="project-links">
+                        <a
+                            target="_blank"
+                            class="project-link no-border"
+                            href="https://github.com/clinzy25/exercism-exercises"
+                            ><button class="project-btn">Code</button></a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="project" data-aos="zoom-in">
+                <img
+                    class="project-image"
+                    src="./images/exercism.png"
+                    alt="Exercism Exercises"
+                />
+                <div class="project-text">
+                    <h3 class="project-title">Exercism Exercises</h3>
+                    <hr />
+                    <p class="project-body">
+                        My solutions to the Exercism Javascript Track
+                    </p>
+                    <div class="project-links">
+                        <a
+                            target="_blank"
+                            class="project-link no-border"
+                            href="https://github.com/clinzy25/exercism-exercises"
+                            ><button class="project-btn">Code</button></a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+          <div class="contact-container">
+                <h1
+                    class="section-header form-header"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                >
+                    Get in touch
+                </h1>
+                <div class="social-icons">
+                    <hr class="social-hr" />
+                    <a target="_blank" href="https://github.com/clinzy25">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/conner-linzy-527787196/"
+                    >
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <hr class="social-hr" />
+                </div>
+                <form
+                    id="contact-form"
+                    action="https://formspree.io/f/xqkwpyqr"
+                    method="POST"
+                >
+                    <label class="form-label">
+                        <input
+                            placeholder="Name"
+                            class="form-input"
+                            type="text"
+                            name="name"
+                        />
+                    </label>
+                    <label class="form-label">
+                        <input
+                            placeholder="Email"
+                            class="form-input"
+                            type="email"
+                            name="_replyto"
+                        />
+                    </label>
+                    <label class="form-label">
+                        <textarea
+                            placeholder="Message"
+                            class="text-area"
+                            name="message"
+                        ></textarea>
+                    </label>
+                    <button class="submit-btn" type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <span class="footer-text">© Conner Linzy 2021</span>
+        </footer>
+        <script
+            src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+            defer
+        ></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- <script src="accessibility.js"></script> -->
+        <script src="main.js"></script>
+    </body>
+</html>
