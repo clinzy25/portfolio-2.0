@@ -12,15 +12,16 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
     mode: mode,
+    entry: ['./src/index.js', './src/accessibility.js'],
     module: {
         rules: [
             {
-                test: /\.s?css/,
+                test: /\.s?css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'postcss-loader',
                     'sass-loader',
+                    'postcss-loader',
                 ],
             },
             {

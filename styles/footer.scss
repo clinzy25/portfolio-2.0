@@ -1,7 +1,8 @@
 @import './_mixins';
+@import './_variables';
 
 #footer {
-    grid-area: 4 / 1 / 4 / 2;
+    // grid-area: 4 / 1 / 4 / 2;
     align-self: flex-end;
     @include flexCenter();
     height: 75px;
@@ -10,7 +11,7 @@
 
 .footer-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
+    font-size: $smallText;
 }
 
 

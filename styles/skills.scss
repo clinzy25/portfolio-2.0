@@ -30,6 +30,15 @@ h3,
 h5,
 h4 {
     font-family: 'Roboto Mono', monospace;
+    h3 {
+        font-size: $mediumHeader;
+    }
+    h4 {
+        font-size: $default;
+    }
+    h5 {
+        font-size: $smallHeader;
+    }
 }
 
 .skill-section > h5 {
@@ -47,19 +56,19 @@ h4 {
 }
 
 .fas {
-    font-size: 2rem;
+    font-size: $largeIcon;
     padding-right: 15px;
 }
 
 .skill-text {
-    font-size: 0.9rem;
+    font-size: $smallText;
     margin: 5px 0;
 }
 
 .tabs-container {
     display: flex;
     flex-wrap: wrap;
-    background: #efefef;
+    background-color: #efefef;
     box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
     margin: 100px 0;
     width: 100%;
@@ -67,7 +76,7 @@ h4 {
 }
 
 .paradigm-text {
-    font-size: 0.9rem;
+    font-size: $smallText;
     margin: 30px 0;
 }
 
@@ -79,20 +88,20 @@ h4 {
 .label {
     width: 100%;
     padding: 20px 30px;
-    background: #e5e5e5;
+    background-color: #e5e5e5;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
+    font-size: $mediumHeader;
+    font-family: 'Roboto Mono', monospace;
     color: #7f7f7f;
-    transition: background 0.1s, color 0.1s;
+    transition: background-color 0.1s, color 0.1s;
 }
 
 .label:hover {
-    background: #d8d8d8;
+    background-color: #d8d8d8;
 }
 
 .label:active {
-    background: #ccc;
+    background-color: #ccc;
 }
 
 .radio:focus + .label {
@@ -100,14 +109,14 @@ h4 {
 }
 
 .radio:checked + .label {
-    background: rgb(138, 138, 138);
+    background-color: rgb(138, 138, 138);
     color: #000;
 }
 
 .panel {
     display: none;
     padding: 20px 30px 30px;
-    background: #fff;
+    background-color: #fff;
 }
 
 .radio:checked + .label + .panel {

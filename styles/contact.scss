@@ -1,10 +1,11 @@
 @import './_mixins';
-@import './variables';
+@import './_variables';
 
-#contact {
+.contact-container {
     @include flexCenter();
     grid-area: 4 / 1 / 4 / 2;
     flex-direction: column;
+    height: 100%;
 }
 
 #contact-form {
@@ -16,7 +17,7 @@
 }
 
 .form-header {
-    font-size: 2rem;
+    font-size: $largeHeader;
     margin: $globalMargin;
     text-align: center;
 }
@@ -27,7 +28,7 @@
 }
 
 .fab {
-    font-size: 2rem;
+    font-size: $largeIcon;
     margin-right: 15px;
     &:hover {
         filter: brightness(120%);
@@ -69,6 +70,8 @@
 
 .form-label {
     font-family: 'Poppins', sans-serif;
+    font-size: $smallText;
+    letter-spacing: 1px;
 }
 
 .submit-btn {
@@ -82,7 +85,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-    #contact {
+    .contact-container {
         margin: $globalMargin;
     }
     #contact-form {
