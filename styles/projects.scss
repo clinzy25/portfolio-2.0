@@ -19,7 +19,7 @@
 .projects-header-image {
     height: 350px;
     width: 100%;
-    top: 210%;
+    top: 195%;
     position: absolute;
     z-index: -2;
     background-color: #181818;
@@ -166,5 +166,10 @@
 
     .project-links {
         padding-top: 0px;
+    }
+    .projects-header-image {
+        height: 350px;
+        width: 100%;
+        top: 2975px;
     }
 }

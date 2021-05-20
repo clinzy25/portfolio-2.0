@@ -36,9 +36,9 @@
 }
 
 .about-image {
-    height: 450px;
+    height: 40%;
     width: 100%;
-    top: 0%;
+    top: 0;
     position: absolute;
     z-index: -2;
     background-color: #181818;
@@ -56,8 +56,9 @@
         font-size: 6rem;
         letter-spacing: -10px;
     }
-    .image {
-        height: 300px;
-        width: 500px;
+    .about-image {
+        height: 33%;
+        width: 100%;
+        top: 0%;
     }
 }
