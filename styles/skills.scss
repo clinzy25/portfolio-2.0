@@ -1,4 +1,5 @@
 @import './_mixins';
+@import './variables';
 
 #skills {
     display: flex;
@@ -6,7 +7,7 @@
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
-    margin: 25px;
+    margin: $globalMargin;
 }
 
 .education-experience-skills {
@@ -19,15 +20,39 @@
 .skill-section {
     width: 100%;
     max-width: 400px;
+    height: min-content;
+    padding-left: 20px;
+    border-left: 1px solid black;
 }
 
-.skill-header,
+.skill-section > .skill-header,
 h3,
-h5 {
+h5,
+h4 {
     font-family: 'Roboto Mono', monospace;
 }
 
-h4 {
+.skill-section > h5 {
+    margin: 5px 0;
+}
+
+.skill-section > h4 {
+    margin: 15px 0 0 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fas {
+    font-size: 2rem;
+    padding-right: 15px;
+}
+
+.skill-text {
+    font-size: 0.9rem;
     margin: 5px 0;
 }
 
@@ -38,6 +63,12 @@ h4 {
     box-shadow: 0 48px 80px -32px rgba(0, 0, 0, 0.3);
     margin: 100px 0;
     width: 100%;
+    max-width: 900px;
+}
+
+.paradigm-text {
+    font-size: 0.9rem;
+    margin: 30px 0;
 }
 
 .radio {
@@ -65,12 +96,11 @@ h4 {
 }
 
 .radio:focus + .label {
-    box-shadow: inset 0px 0px 0px 3px #2aa1c0;
     z-index: 1;
 }
 
 .radio:checked + .label {
-    background: #fff;
+    background: rgb(138, 138, 138);
     color: #000;
 }
 
@@ -86,12 +116,23 @@ h4 {
 
 @media (min-width: 800px) {
     .tabs-container {
-      width: 75%;
+        width: 75%;
     }
     .label {
         width: auto;
     }
     .panel {
         order: 99;
+    }
+    .skill-section {
+        margin: 20px;
+    }
+    .paradigm-text {
+        margin: 30px 100px;
+    }
+}
+@media (max-width: 800px) {
+    .skill-section {
+        margin-top: 80px;
     }
 }
