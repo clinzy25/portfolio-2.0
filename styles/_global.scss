@@ -1,20 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&family=Poppins:wght@300&family=Roboto+Mono:wght@700&family=Rubik&display=swap');
+@import '_variables';
 
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 1rem;
-}
-
-body {
+  }
+  
+  body {
     margin: 0;
     min-height: 100vh;
     display: grid;
-    background-color: white;
     overflow-x: hidden;
+    // background-color: dodgerblue;
     grid-template-rows:
         [about] 100vh [skills] auto [projects] auto
         [contact footer] 100vh;
+}
+
+.high-contrast {
+  filter: contrast(200%);
+}
+
+.grayscale {
+  filter: grayscale(100%);
 }
 
 .no-border {

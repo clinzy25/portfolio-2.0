@@ -41,7 +41,7 @@ let prev = 0;
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
-    if (!recentClick) {
+    if (!recentClick || scrollTop - prev > 100) {
         navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
     }
     prev = scrollTop;
