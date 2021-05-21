@@ -30,29 +30,6 @@ body {
     border-left: 1px solid $lightMainTextColor !important;
 }
 
-
-// .dark-mode {
-//     filter: invert(100%);
-//     .fas,
-//     .about-image,
-//     .hello-container,
-//     .name,
-//     label,
-//     .project-header,
-//     .project-image,
-//     .form-header,
-//     .fab,
-//     .border,
-//     .dropdown-content,
-//     button,
-//     form {
-//         filter: invert(100%);
-//     }
-//     .fas, .hello-container, .project-header, .form-header, label, .border, button {
-//       filter: hue-rotate(165deg);
-//     }
-// }
-
 .high-contrast {
     filter: contrast(200%);
 }
