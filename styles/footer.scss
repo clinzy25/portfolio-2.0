@@ -8,8 +8,14 @@
     background-color: $black;
 }
 
+.metal {
+    height: 33px;
+    width: 33px;
+    margin: 20px;
+}
+
 .footer-text {
-    font-family: 'Poppins', sans-serif;
+    @include smallTextFont();
     font-size: $smallText;
     color: $secondaryTextColor;
 }

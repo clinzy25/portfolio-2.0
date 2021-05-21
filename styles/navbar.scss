@@ -1,4 +1,5 @@
 @import './_variables';
+@import './mixins';
 
 // Desktop
 #navbar {
@@ -9,9 +10,8 @@
     position: fixed;
     width: 100%;
     height: 75px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: $default;
-    letter-spacing: 1px;
+    @include headerFont();
+    font-size: $navText;
     z-index: 4;
     background-color: $black;
     transition: transform 0.3s ease-out;

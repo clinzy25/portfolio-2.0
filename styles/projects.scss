@@ -1,4 +1,5 @@
 @import './_variables';
+@import './mixins';
 
 #projects {
     display: grid;
@@ -11,7 +12,7 @@
     grid-area: 1 / 1 / 2 / span 3;
     margin: $globalMargin;
     color: $accent1;
-    font-family: 'Roboto Mono', monospace;
+    @include xlHeaderFont();
     font-size: 4rem;
     text-shadow: 10px 10px 5px $shadowColor;
 }
@@ -72,7 +73,7 @@
 }
 
 .project-title {
-    font-family: 'Roboto Mono', monospace;
+    @include headerFont();
     font-size: 2rem;
     color: $mainTextColor;
     margin-bottom: 0;
@@ -87,7 +88,7 @@
     transform: translate(-50%, -50%);
     color: $mainTextColor;
     opacity: 0;
-    font-family: 'Poppins', sans-serif;
+    @include smallTextFont();
     transition: opacity ease-out 250ms;
     letter-spacing: 1px;
     hr {
@@ -105,13 +106,13 @@
 }
 
 .project-btn {
-    font-family: 'Roboto Mono', monospace;
+    @include headerFont();
     cursor: pointer;
     text-decoration: none;
     background: transparent;
-    padding: 5px 50px;
+    padding: 7px 50px;
     color: $mainTextColor;
-    font-size: $smallText;
+    font-size: $navText;
     border: 1px solid $mainTextColor;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
     margin: 5px;

@@ -7,7 +7,7 @@
 
 .about-text {
     width: 50%;
-    font-family: 'Poppins', sans-serif;
+    @include smallTextFont();
     font-size: $largeText;
     color: $secondaryTextColor;
 }
@@ -22,15 +22,15 @@
     left: 0;
     margin: $globalMargin;
     font-size: 8rem;
-    font-family: 'Roboto Mono', monospace;
-    color: $accent1;
+    @include xlHeaderFont();
     z-index: -1;
     white-space: nowrap;
     line-height: 350px;
 }
 
 .name {
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.7rem;
     letter-spacing: 1px;
     color: $accent2;
 }

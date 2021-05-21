@@ -58,8 +58,9 @@
 .text-area {
     width: 100%;
     margin: 5px 0;
-    padding: 10px 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    @include smallTextFont();
     font-size: $smallText;
     background-color: $black;
     color: $secondaryTextColor;
@@ -67,7 +68,7 @@
     border: 0;
     border-radius: 5px;
     &::placeholder {
-        font-family: 'Poppins', sans-serif;
+        @include smallTextFont();
         font-size: $smallText;
         letter-spacing: 1px;
         color: $secondaryTextColor;
@@ -79,18 +80,18 @@
 }
 
 .form-input {
-    height: 30px;
+    height: 40px;
 }
 
 .text-area {
-    height: 200px;
+    height: 300px;
     resize: none;
 }
 
 .submit-btn {
     align-self: center;
     width: 50%;
-    font-family: 'Roboto Mono', monospace;
+    @include headerFont();
     cursor: pointer;
     text-decoration: none;
     background: transparent;

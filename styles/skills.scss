@@ -6,8 +6,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
     margin: $globalMargin;
 }
 
@@ -29,7 +27,7 @@
 .skill-section,
 h5,
 h4 {
-    font-family: 'Roboto Mono', monospace;
+    @include headerFont();
     color: $secondaryTextColor;
     h3 {
         font-size: $mediumHeader;
@@ -37,14 +35,14 @@ h4 {
     }
     h4 {
         font-size: $default;
-        margin: 15px 0 0 0;
+        margin: 20px 0 0 0;
     }
     h5 {
         font-size: $smallHeader;
-        margin: 5px 0;
+        margin: 20px 0 7px 0;
     }
     .skill-text {
-        font-family: 'Poppins', sans-serif;
+        @include smallTextFont();
     }
 }
 
@@ -62,7 +60,6 @@ h4 {
 
 .skill-text {
     font-size: $smallText;
-    color: $mainTextColor;
     margin: 5px 0;
     color: $mainTextColor;
 }
@@ -70,12 +67,12 @@ h4 {
 .tabs-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: $mainBackground;
-    box-shadow: 0 50px 50px $black;
+    box-shadow: 0 60px 60px black;
     margin: 100px 0;
     width: 100%;
     max-width: 900px;
     color: $secondaryTextColor;
+    background-color: $mainBackground;
 }
 
 .panel {
@@ -85,7 +82,8 @@ h4 {
 }
 
 .paradigm-text {
-    font-size: $smallText;
+    @include smallTextFont();
+    font-size: $default;
     margin: 30px 0;
 }
 
@@ -100,13 +98,13 @@ h4 {
     background-color: $black;
     cursor: pointer;
     font-size: $mediumHeader;
-    font-family: 'Roboto Mono', monospace;
+    @include headerFont();
     color: $secondaryTextColor;
     transition: background-color 0.1s, color 0.1s;
 }
 
 .label:hover {
-    color:$accent2;
+    color: $accent2;
 }
 
 .label:active {

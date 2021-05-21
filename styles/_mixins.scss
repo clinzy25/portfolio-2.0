@@ -1,5 +1,23 @@
+@import '_variables';
+
 @mixin flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Fonts
+@mixin smallTextFont {
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+@mixin headerFont {
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 3px;
+}
+
+@mixin xlHeaderFont {
+    font-family: 'Share Tech Mono', monospace;
+    color: $accent1;
 }
