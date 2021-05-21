@@ -5,13 +5,15 @@ $smallText: 0.9rem;
 $largeText: 1.3rem;
 $navText: 1.1rem;
 
-$smallHeader: 1.0rem;
+$smallHeader: 1rem;
 $mediumHeader: 1.2rem;
 $largeHeader: 2rem;
 
 $default: 1rem;
 $largeIcon: 2rem;
 $smallIcon: 1.2rem;
+
+/////// Dark Mode
 
 // Content Colors
 $mainBackground: rgb(24, 24, 24);
@@ -20,8 +22,20 @@ $black: rgb(10, 10, 10);
 $shadowColor: rgba(0, 0, 0, 0.445);
 
 // Dark Text Colors
-$mainTextColor: whitesmoke;
+$mainTextColor: #f5f5f5;
 $secondaryTextColor: rgb(157, 165, 180);
 $accent1: rgba(109, 214, 155, 80%);
 // #6DD69B
-$accent2: #6CACCB;
+$accent2: #6caccb;
+
+///////// Light Mode
+
+// Content Colors
+$lightMainBackground: whitesmoke;
+
+// Light Text Colors
+$lightMainTextColor: rgb(24, 24, 24);
+// $secondaryTextColor: rgb(84, 88, 95);
+// $accent1: rgba(109, 214, 155, 80%);
+// #6DD69B
+// $accent2: #6caccb;
