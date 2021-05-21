@@ -89,7 +89,7 @@
 }
 
 .form-border {
-  border: 1px solid $lightMainTextColor;
+    border: 1px solid $lightMainTextColor;
 }
 
 .submit-btn {
@@ -121,5 +121,9 @@
     }
     #contact-form {
         width: 100%;
+    }
+    .submit-btn {
+        background-color: $accent1;
+        color: #000;
     }
 }
