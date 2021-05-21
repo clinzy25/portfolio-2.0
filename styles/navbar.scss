@@ -133,10 +133,9 @@
     position: fixed;
     cursor: pointer;
     visibility: hidden;
-    margin: 15px;
-    padding: 10px 15px;
+    padding: 5px 10px;
     background-color: $mainBackground;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .menu-bars-light {
@@ -196,7 +195,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        padding: 20px;
+        margin: 15px;
     }
 
     .nav-links-container {
@@ -215,8 +214,8 @@
 
     .accessibility {
         background-color: $mainBackground;
-        border-radius: 10px;
-        padding: 25px;
+        border-radius: 5px;
+        padding: 15px;
         margin: -25px;
     }
 
