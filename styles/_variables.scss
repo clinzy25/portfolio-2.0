@@ -13,23 +13,21 @@ $default: 1rem;
 $largeIcon: 2rem;
 $smallIcon: 1.2rem;
 
-/////// Dark Mode
 
+// Dark Mode
 // Content Colors
 $mainBackground: rgb(24, 24, 24);
 $secondaryBackground: rgb(158, 158, 158);
 $black: rgb(10, 10, 10);
 $shadowColor: rgba(0, 0, 0, 0.445);
 
-// Dark Text Colors
+//Text Colors
 $mainTextColor: #f5f5f5;
 $secondaryTextColor: rgb(157, 165, 180);
 $accent1: rgba(109, 214, 155, 80%);
-// #6DD69B
 $accent2: #6caccb;
 
-///////// Light Mode
-
+// Light Mode
 // Content Colors
 $lightMainBackground: whitesmoke;
 

@@ -4,7 +4,8 @@ const fontDecBtn = document.querySelector('.font-dec');
 const grayScaleBtn = document.querySelector('.grayscale');
 const contrastBtn = document.querySelector('.high-contrast');
 const html = document.querySelector('html');
-const accessibilityMenu = document.querySelector('.dropdown-container');
+const accessibilityMenu = document.querySelector('.accessibility');
+const accessibilityContent = document.querySelector('.dropdown-container');
 // For Dark Mode
 const backgroundImage = document.querySelector('.about-background');
 const menuBars = document.querySelector('.menu-bars');
@@ -16,54 +17,53 @@ const paradigmText = document.querySelectorAll('.tab-text');
 const formInput = document.querySelectorAll('.form-input');
 const formMessage = document.querySelector('.text-area');
 const submitBtn = document.querySelector('.submit-btn');
-const footer = document.querySelector('#footer');
 
 accessibilityMenu.addEventListener('click', () => {
-  accessibilityMenu.classList.toggle('show-menu');
+    accessibilityContent.classList.toggle('show-menu');
 });
 
-accessibilityMenu.addEventListener('mouseover', () => {
-  accessibilityMenu.classList.toggle('show-menu');
+accessibilityContent.addEventListener('mouseover', () => {
+    accessibilityContent.classList.toggle('show-menu');
 });
 
-accessibilityMenu.addEventListener('mouseout', () => {
-  accessibilityMenu.classList.remove('show-menu');
+accessibilityContent.addEventListener('mouseout', () => {
+    accessibilityContent.classList.remove('show-menu');
 });
-
 
 let fontSize = 1;
 
 const disableBtn = () => {
-  if (fontSize === 0.8) {
-    fontDecBtn.classList.add('disabled');
-  }
-  if (fontSize === 1.3) {
-    fontIncBtn.classList.add('disabled');
-  }
-  if (fontSize !== 0.8) {
-    fontDecBtn.classList.remove('disabled');
-  }
-  if (fontSize !== 1.3) {
-    fontIncBtn.classList.remove('disabled');
-  }
+    if (fontSize === 0.8) {
+        fontDecBtn.classList.add('disabled');
+    }
+    if (fontSize === 1.3) {
+        fontIncBtn.classList.add('disabled');
+    }
+    /** Strange bug fixed by this explicitness */
+    if (fontSize !== 0.8) {
+        fontDecBtn.classList.remove('disabled');
+    }
+    if (fontSize !== 1.3) {
+        fontIncBtn.classList.remove('disabled');
+    }
 };
 
 const increaseFontSize = () => {
-  if (fontSize < 1.3) {
-    fontSize += 0.1;
-    fontSize = +fontSize.toFixed(1);
-    html.style['font-size'] = `${fontSize}rem`;
-  }
-  disableBtn();
+    if (fontSize < 1.3) {
+        fontSize += 0.1;
+        fontSize = +fontSize.toFixed(1);
+        html.style['font-size'] = `${fontSize}rem`;
+    }
+    disableBtn();
 };
 
 const decreaseFontSize = () => {
-  if (fontSize > 0.8) {
-    fontSize -= 0.1;
-    fontSize = +fontSize.toFixed(1);
-    html.style['font-size'] = `${fontSize}rem`;
-  }
-  disableBtn();
+    if (fontSize > 0.8) {
+        fontSize -= 0.1;
+        fontSize = +fontSize.toFixed(1);
+        html.style['font-size'] = `${fontSize}rem`;
+    }
+    disableBtn();
 };
 
 const toggleDarkMode = () => {
@@ -96,7 +96,6 @@ const toggleDarkMode = () => {
     formMessage.classList.toggle('light-text');
     formMessage.classList.toggle('form-border');
     submitBtn.classList.toggle('light-text');
-    footer.classList.toggle('light-global');
 };
 
 const toggleGreyScale = () => {

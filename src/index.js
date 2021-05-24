@@ -51,14 +51,13 @@ navLink.forEach((link) => {
     });
 });
 
-let prev = 0;
-
 /**
  *  Only hide navbar if :
  *  NOT switching quickly between links
  *  NOT at the top of the page
  *  Scrolled more than 100px
  */
+let prev = 0;
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     if (!recentClick || scrollTop - prev > 100) {

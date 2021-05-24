@@ -1,12 +1,52 @@
 @import './_mixins';
 @import './_variables';
 
+// Form Header
+
 .contact-container {
     @include flexCenter();
     grid-area: 4 / 1 / 4 / 2;
     flex-direction: column;
     height: 100%;
+    margin: $globalMargin;
+    .form-header {
+        font-size: $largeHeader;
+        margin: $globalMargin;
+        color: $accent1;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+        .fab {
+            font-size: $largeIcon;
+            margin-right: 15px;
+            &:hover {
+                filter: brightness(140%);
+            }
+        }
+
+        .fa-github {
+            color: #d6d8da;
+            margin-left: 15px;
+        }
+
+        .fa-linkedin {
+            color: #0966c2;
+        }
+
+        .social-hr {
+            display: inline;
+            height: 1px;
+            background-color: $secondaryTextColor;
+            width: 20vw;
+            max-width: 220px;
+            border: 0;
+        }
+    }
 }
+
+//Form
 
 #contact-form {
     display: flex;
@@ -14,126 +54,70 @@
     width: 40%;
     height: 500px;
     margin: $globalMargin;
-}
-
-.form-header {
-    font-size: $largeHeader;
-    margin: $globalMargin;
-    color: $accent1;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    align-items: center;
-}
-
-.fab {
-    font-size: $largeIcon;
-    margin-right: 15px;
-    &:hover {
-        filter: brightness(140%);
-    }
-}
-
-.fa-github {
-    color: #d6d8da;
-    margin-left: 15px;
-}
-
-.fa-linkedin {
-    color: #0966c2;
-}
-
-.social-hr {
-    display: inline;
-    height: 1px;
-    background-color: $secondaryTextColor;
-    width: 20vw;
-    max-width: 220px;
-    border: 0;
-}
-
-.form-input,
-.text-area {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-    box-sizing: border-box;
-    @include smallTextFont();
-    font-size: $smallText;
-    background-color: $black;
-    color: $secondaryTextColor;
-    letter-spacing: 1px;
-    border: 0;
-    border-radius: 5px;
-    &::placeholder {
+    .form-input,
+    .text-area {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+        box-sizing: border-box;
         @include smallTextFont();
         font-size: $smallText;
-        letter-spacing: 1px;
         color: $secondaryTextColor;
+        letter-spacing: 1px;
+        border: 0;
+        border-radius: 5px;
+        background-color: $black;
+        &::placeholder {
+            @include smallTextFont();
+            font-size: $smallText;
+            color: $secondaryTextColor;
+            letter-spacing: 1px;
+        }
+        &:focus {
+            outline: 1px solid $secondaryTextColor;
+        }
     }
-    &:focus {
-        // filter: brightness(170%);
-        outline: 1px solid $secondaryTextColor;
+
+    .form-input {
+        height: 40px;
     }
-}
 
-.form-input {
-    height: 40px;
-}
+    .text-area {
+        height: 300px;
+        resize: none;
+    }
 
-.text-area {
-    height: 300px;
-    resize: none;
-}
-
-.form-border {
-    border: 1px solid $lightMainTextColor;
-}
-
-.submit-btn {
-    align-self: center;
-    width: 50%;
-    @include headerFont();
-    cursor: pointer;
-    text-decoration: none;
-    background: transparent;
-    padding: 10px 50px;
-    color: $mainTextColor;
-    font-size: $smallText;
-    border: 1px solid $secondaryTextColor;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
-    margin: 5px;
-    transition: transform 0.1s;
-    &:hover,
-    &:focus,
-    &:active {
-        background: $accent1;
-        color: #000;
-        transition: all 0.2s ease-in;
+    .form-border {
+        border: 1px solid $lightMainTextColor;
+    }
+    .submit-btn {
+        @include button();
+        align-self: center;
+        width: 50%;
+        @include headerFont();
+        cursor: pointer;
+        padding: 10px 50px;
+        font-size: $smallText;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .contact-container {
-        margin: $globalMargin;
-    }
     #contact-form {
         width: 100%;
-    }
-    .submit-btn {
-        background-color: $accent1;
-        color: #000;
-    }
-    .form-input {
-        height: 55px;
-    }
-    .form-input,
-    .text-area {
-        font-size: $smallHeader;
-        &::placeholder {
+        .form-input {
+            height: 55px;
+        }
+
+        .form-input,
+        .text-area {
             font-size: $smallHeader;
+            &::placeholder {
+                font-size: $smallHeader;
+            }
+        }
+        .submit-btn {
+            background-color: $accent1;
+            color: #000;
         }
     }
 }
