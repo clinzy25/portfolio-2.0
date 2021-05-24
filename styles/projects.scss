@@ -4,16 +4,26 @@
 #projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: [header] 200px auto;
+    grid-template-rows: [header] auto auto;
     padding-top: 75px;
 }
 
 .project-header {
     grid-area: 1 / 1 / 2 / span 3;
+    display: flex;
     margin: $globalMargin;
     color: $accent1;
     @include xlHeaderFont();
     font-size: 4rem;
+}
+
+.projects-hr {
+    border-color: $accent1;
+    background-color: $accent1;
+    align-self: center;
+    height: 1px;
+    width: 100%;
+    margin: 0 40px;
 }
 
 .project {
@@ -71,13 +81,6 @@
     transition: transform ease-out 250ms;
 }
 
-.project-title {
-    @include headerFont();
-    font-size: 2rem;
-    color: $mainTextColor;
-    margin-bottom: 0;
-}
-
 .project-text {
     z-index: 3;
     position: absolute;
@@ -90,40 +93,40 @@
     @include smallTextFont();
     transition: opacity ease-out 250ms;
     letter-spacing: 1px;
-    hr {
-        width: 30%;
-        border-color: $accent1;
+    .project-title {
+        @include headerFont();
+        font-size: 2rem;
+        color: $mainTextColor;
+        margin-bottom: 0;
     }
-}
-
-.project-links {
-    padding-top: 40px;
-    transition: transform ease-out 250ms;
-    :hover {
-        color: $accent1;
+    .project-links {
+        padding-top: 40px;
+        transition: transform ease-out 250ms;
+        :hover {
+            color: $accent1;
+        }
     }
-}
-
-.project-btn {
-    @include headerFont();
-    cursor: pointer;
-    text-decoration: none;
-    background: transparent;
-    padding: 7px 50px;
-    color: $mainTextColor;
-    font-size: $navText;
-    border: 1px solid $mainTextColor;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
-    margin: 5px;
-    transition: transform 0.1s;
-    &:hover,
-    &:focus,
-    &:active {
-        background: $accent1;
-        color: #000;
-        transition: all 0.2s ease-in;
-    }
-}
+  }
+  .project-btn {
+      @include headerFont();
+      cursor: pointer;
+      text-decoration: none;
+      background: transparent;
+      padding: 7px 50px;
+      color: $mainTextColor;
+      font-size: $navText;
+      border: 1px solid $mainTextColor;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+      margin: 5px;
+      transition: transform 0.1s;
+      &:hover,
+      &:focus,
+      &:active {
+          background: $accent1;
+          color: #000;
+          transition: all 0.2s ease-in;
+      }
+  }
 
 .no-border {
     border: 0;
@@ -161,7 +164,7 @@
             filter: blur(2px) brightness(0.4);
         }
         .project-text {
-          opacity: 1;
+            opacity: 1;
         }
     }
 
@@ -170,13 +173,12 @@
         grid-area: 1 / 1 / 2 / span 1;
     }
 
+    .projects-hr {
+        display: none;
+    }
+
     .project-links {
         padding-top: 0px;
-    }
-    .projects-header-image {
-        height: 350px;
-        width: 100%;
-        top: 2975px;
     }
     .project-btn {
         background: $accent1;
