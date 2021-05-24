@@ -52,6 +52,9 @@ navLink.forEach((link) => {
     });
 });
 
+accessibilityMenu.addEventListener('click', () => {
+    accessibilityMenu.classList.toggle('show-menu');
+});
 accessibilityMenu.addEventListener('mouseover', () => {
     accessibilityMenu.classList.toggle('show-menu');
 });
