@@ -55,13 +55,15 @@ navLink.forEach((link) => {
 let prev = 0;
 
 accessibilityMenu.addEventListener('click', () => {
-  accessibilityMenu.classList.toggle('show-accessibility-menu')
-})
+    if (window.innerWidth <= 800) {
+        accessibilityMenu.classList.toggle('show-accessibility-menu');
+    }
+});
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
     if (!recentClick || scrollTop - prev > 100) {
-      navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
+        navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
     }
     if (scrollTop < 100) navbar.classList.remove('hide-scroll-down');
     prev = scrollTop;
