@@ -54,7 +54,11 @@ navLink.forEach((link) => {
 let prev = 0;
 
 window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
     let scrollTop = window.scrollY;
+    if (scrollTop === 0) {
+        navbar.classList.remove('hide-scroll-down', scrollTop > prev);
+    }
     if (!recentClick || scrollTop - prev > 100) {
         navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
     }
