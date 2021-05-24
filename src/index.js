@@ -55,9 +55,9 @@ let prev = 0;
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
-    if (scrollTop < 50) navbar.classList.remove('hide-scroll-down');
     if (!recentClick || scrollTop - prev > 100) {
-        navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
+      navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
     }
+    if (scrollTop < 100) navbar.classList.remove('hide-scroll-down');
     prev = scrollTop;
 });
