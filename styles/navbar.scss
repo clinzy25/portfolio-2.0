@@ -73,11 +73,11 @@
     position: relative;
     display: inline-block;
     padding-bottom: 50px;
-    &:hover {
-        .dropdown-content {
-            display: block;
-        }
-    }
+    // &:hover {
+    //     .dropdown-content {
+    //         display: block;
+    //     }
+    // }
 }
 
 .dropdown-content {
@@ -115,6 +115,7 @@
     .fas {
         font-size: $smallIcon;
         color: $black;
+        padding-right: 10px;
     }
 
     &:before {
