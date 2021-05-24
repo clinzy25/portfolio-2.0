@@ -1,5 +1,3 @@
-import '../styles/index.scss';
-
 const menuBars = document.querySelector('.menu-bars');
 const navbar = document.querySelector('#navbar');
 const navLink = document.querySelectorAll('.nav-link');
