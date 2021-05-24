@@ -44,6 +44,13 @@
         from(rgba(0, 0, 0, 1)),
         to(rgba(0, 0, 0, 0))
     );
+    mask-image: gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 1)),
+        to(rgba(0, 0, 0, 0))
+    );
 }
 
 // Light mode background-image
