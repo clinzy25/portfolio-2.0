@@ -61,7 +61,7 @@
     margin: $globalMargin;
     position: relative;
     display: inline-block;
-    height: 100%;
+    padding-bottom: 40px;
     &:hover {
         .dropdown-content {
             display: block;
@@ -180,6 +180,7 @@
     .menu-bars {
         visibility: visible;
         cursor: pointer;
+        width: 100%;
     }
 
     #navbar {
@@ -195,7 +196,6 @@
         position: absolute;
         right: 0;
         top: 0;
-        margin: 15px;
     }
 
     .nav-links-container {
@@ -210,13 +210,6 @@
     .nav-link {
         border: 0;
         padding: 50px 100%;
-    }
-
-    .accessibility {
-        background-color: $mainBackground;
-        border-radius: 5px;
-        padding: 15px;
-        margin: -25px;
     }
 
     .border {
