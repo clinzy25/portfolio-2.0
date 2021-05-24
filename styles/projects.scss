@@ -62,9 +62,6 @@
             transform: scale(1.1);
             filter: blur(2px) brightness(0.4);
         }
-        .project-links {
-            display: block;
-        }
     }
 }
 
@@ -100,7 +97,6 @@
 }
 
 .project-links {
-    display: none;
     padding-top: 40px;
     transition: transform ease-out 250ms;
     :hover {
@@ -150,6 +146,23 @@
 @media only screen and (max-width: 800px) {
     #projects {
         grid-template-columns: 1fr;
+    }
+
+    .project {
+        &::before {
+            transform: scale(1, 1);
+        }
+
+        &::after {
+            transform: scale(1, 1);
+        }
+        .project-image {
+            transform: scale(1.1);
+            filter: blur(2px) brightness(0.4);
+        }
+        .project-text {
+          opacity: 1;
+        }
     }
 
     .project-header {
