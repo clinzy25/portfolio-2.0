@@ -63,7 +63,9 @@
 }
 
 .show-accessibility-menu {
-    display: block;
+    .dropdown-content {
+        display: block;
+    }
 }
 
 .dropdown-container {
