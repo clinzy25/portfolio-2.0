@@ -52,6 +52,7 @@
     text-decoration: none;
     cursor: pointer;
     transition: color 0.2s ease;
+    user-select: none;
     &:hover {
         color: $accent2;
     }
@@ -133,7 +134,7 @@
     position: fixed;
     cursor: pointer;
     visibility: hidden;
-    padding: 5px 10px;
+    padding: 0 10px;
     background-color: $mainBackground;
     border-radius: 5px;
 }
@@ -181,8 +182,10 @@
         visibility: visible;
         cursor: pointer;
         width: 100%;
+        z-index: -1;
+        box-shadow: 5px 5px 10px black;
     }
-
+    
     #navbar {
         height: 100%;
         visibility: hidden;
@@ -248,6 +251,9 @@
         }
         .dropdown-container {
             pointer-events: none;
+        }
+        .menu-bars {
+            box-shadow: none;
         }
     }
 }
