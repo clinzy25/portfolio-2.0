@@ -1,3 +1,14 @@
+import '../styles/index.scss';
+import './images/ecommerce.jpg';
+import './images/exercism.jpg';
+import './images/github.jpg';
+import './images/javascript.png';
+import './images/logo-black.png';
+import './images/logo-white.png';
+import './images/metal-white.png';
+import './images/small-web-projects.jpg';
+import './images/time-blocker.jpg';
+
 const menuBars = document.querySelector('.menu-bars');
 const navbar = document.querySelector('#navbar');
 const navLink = document.querySelectorAll('.nav-link');
