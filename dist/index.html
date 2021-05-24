@@ -25,11 +25,13 @@
     <body>
         <!-- Navbar -->
         <nav id="navbar">
-          <div class="menu-bars" id="menu-bars">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </div>
+          <div class="mobile-nav-bar">
+            <div class="menu-bars" id="menu-bars">
+                  <div class="bar bar1"></div>
+                  <div class="bar bar2"></div>
+                  <div class="bar bar3"></div>
+              </div>
+          </div>
             <ul class="nav-links-container">
                 <img id="logo" src="./images/logo-white.png" alt="Logo" />
                 <li class="nav-link no-border">
@@ -72,13 +74,13 @@
 
         <!-- About -->
         <section id="about">
-          <div class="about-image"></div>
+          <div class="about-background"></div>
             <div class="hello-container" data-aos="fade-right">
                 <h1 class="hello">hello {</h1>
-                <h1 class="hello-end">}</h1>
+                <h1 class="hello-end-bracket">}</h1>
             </div>
             <p class="about-text">
-                My name is <span class="name">CONNER LINZY</span
+                My name is <span id="conner-linzy">CONNER LINZY</span
                 >. I'm a web developer based in Charlotte, NC. I specialize in
                 lightweight, scalable front-end architecture with the React
                 framework. I strive to create regenerative technology that helps
@@ -88,10 +90,11 @@
 
         <!-- Skills -->
         <section id="skills">
-            <div class="education-experience-skills">
-                <div class="dot"></div>
-                <div class="skill-section education">
-                    <div class="header-container">
+          <!-- Skills Sections -->
+            <div class="skill-section-container">
+              <!-- Education -->
+                <article class="skill-section">
+                    <div class="skill-header-container">
                         <i class="fas fa-book-open"></i>
                         <h3 class="skill-header">Education</h3>
                     </div>
@@ -104,10 +107,10 @@
                         CompTIA A+ | ITIL Foundation Level | CIW UI Designer |
                         CIW Site Dev Associate
                     </p>
-                </div>
-
-                <div class="skill-section skills">
-                    <div class="header-container">
+                </article>
+                <!-- Skills -->
+                <article class="skill-section">
+                    <div class="skill-header-container">
                         <i class="fas fa-toolbox"></i>
                         <h3 class="skill-header">Skills</h3>
                     </div>
@@ -129,16 +132,16 @@
                     <p class="skill-text">
                         General Management | Client Relations | Project Planning
                     </p>
-                </div>
-
-                <div class="skill-section exerience">
-                    <div class="header-container">
+                </article>
+                <!-- Experience -->
+                <article class="skill-section">
+                    <div class="skill-header-container">
                         <i class="fas fa-shoe-prints"></i>
                         <h3 class="skill-header">Experience</h3>
                     </div>
                     <h5>Supervisor | Electrician | Centrifugal Pump Repair</h5>
                     <span class="skill-text">BlueH2O Irrigation</span>
-                </div>
+                </article>
             </div>
 
             <!-- Tabs -->
@@ -148,16 +151,17 @@
                     type="radio"
                     id="tab-1"
                     checked="checked"
-                    class="radio"
+                    class="tab"
                 />
+                <!-- Sustainable Design -->
                 <label for="tab-1" class="label">Sustainable Design</label>
-                <div class="panel">
-                    <p class="paradigm-text">
+                <div class="tab-content">
+                    <p class="tab-text">
                         From loading a web page to sending an IM, every action
                         on the web requires energy. If the internet were a
                         country, it will rank #4 in the world for its rate of
                         emissions by 2025. In light of the climate crisis, we
-                        must design products that are <span class='highlight'>future-friendly</span>,
+                        must design products that are <span class='text-accent'>future-friendly</span>,
                         and do not consume resources unnecessarily. Writing
                         performant code, thoughtfully using images and videos,
                         and selecting green hosting services are the most
@@ -166,33 +170,33 @@
                         generations.
                     </p>
                 </div>
-
-                <input name="tabs" type="radio" id="tab-2" class="radio" />
+                <!-- Humane Design -->
+                <input name="tabs" type="radio" id="tab-2" class="tab" />
                 <label for="tab-2" class="label">Humane Design</label>
-                <div class="panel">
-                    <p class="paradigm-text">
+                <div class="tab-content">
+                    <p class="tab-text">
                         Creating technologies that are
-                        <span class='highlight'>sensitive to human nature</span>, and do not try to
+                        <span class='text-accent'>sensitive to human nature</span>, and do not try to
                         exploit, addict, or manipulate users. Psychological
                         factors in UX should be considered to ensure products
                         promote a healthy mind and a sense of well-being.
                         Additionally, our information infrastucture and public
                         discourse is now shaped by the internet, and it's our
                         responsibility to make products that are
-                        <span class='highlight'>inherently good for society</span>, and do not
+                        <span class='text-accent'>inherently good for society</span>, and do not
                         inadvertently divide, outrage, or misinform.
                     </p>
                 </div>
-
-                <input name="tabs" type="radio" id="tab-3" class="radio" />
+                <!-- Accessible Design -->
+                <input name="tabs" type="radio" id="tab-3" class="tab" />
                 <label for="tab-3" class="label">Accessible Design</label>
-                <div class="panel">
-                    <p class="paradigm-text">
+                <div class="tab-content">
+                    <p class="tab-text">
                         Creating technologies at are available to all people,
                         regardless of their hardware, language, location, or
                         abilities. Web developers can maintain the inclusive
                         culture of the internet by focusing on, above all, a
-                        <span class='highlight'>high quality user experience</span> that adheres to
+                        <span class='text-accent'>high quality user experience</span> that adheres to
                         responsive design, internationalization, and W3C
                         standards.
                     </p>

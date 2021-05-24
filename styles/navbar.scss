@@ -24,6 +24,10 @@
     }
 }
 
+.mobile-nav-bar {
+    display: none;
+}
+
 #logo {
     height: 60px;
     width: 60px;
@@ -134,9 +138,8 @@
     position: fixed;
     cursor: pointer;
     visibility: hidden;
-    padding: 0 10px;
-    background-color: $mainBackground;
-    border-radius: 5px;
+    padding: 5px 10px 0 15px;
+    background-color: $black;
 }
 
 .menu-bars-light {
@@ -178,14 +181,22 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .mobile-nav-bar {
+        display: block;
+        position: fixed;
+        height: 75px;
+        width: 100%;
+        background-color: $black;
+        visibility: visible;
+        box-shadow: 5px 5px 10px black;
+    }
+
     .menu-bars {
         visibility: visible;
         cursor: pointer;
-        width: 100%;
         z-index: -1;
-        box-shadow: 5px 5px 10px black;
     }
-    
+
     #navbar {
         height: 100%;
         visibility: hidden;
@@ -254,6 +265,10 @@
         }
         .menu-bars {
             box-shadow: none;
+            background-color: $mainBackground;
+        }
+        .mobile-nav-bar {
+            visibility: hidden;
         }
     }
 }

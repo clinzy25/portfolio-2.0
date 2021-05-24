@@ -5,7 +5,7 @@ const grayScaleBtn = document.querySelector('.grayscale');
 const contrastBtn = document.querySelector('.high-contrast');
 const html = document.querySelector('html');
 // For Dark Mode
-const backgroundImage = document.querySelector('.about-image');
+const backgroundImage = document.querySelector('.about-background');
 const navbar = document.querySelector('#navbar');
 const menuBars = document.querySelector('.menu-bars');
 const menuBar = document.querySelectorAll('.bar');
@@ -16,8 +16,8 @@ const accessibility = document.querySelector('.accessibility');
 const skillHeader = document.querySelectorAll('h3');
 const skillText = document.querySelectorAll('.skill-text');
 const skillSection = document.querySelectorAll('.skill-section');
-const panel = document.querySelectorAll('.panel');
-const paradigmText = document.querySelectorAll('.paradigm-text');
+const panel = document.querySelectorAll('.tab-content');
+const paradigmText = document.querySelectorAll('.tab-text');
 const formInput = document.querySelectorAll('.form-input');
 const formMessage = document.querySelector('.text-area');
 const submitBtn = document.querySelector('.submit-btn');
@@ -77,7 +77,7 @@ const toggleDarkMode = () => {
         item.classList.toggle('menu-bars-light');
     });
 
-    backgroundImage.classList.toggle('light-about-image');
+    backgroundImage.classList.toggle('light-about-background');
 
     skillHeader.forEach((item) => {
         item.classList.toggle('light-text');

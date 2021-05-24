@@ -3,102 +3,89 @@
 
 #skills {
     padding-top: 75px;
-    display: flex;
-    align-items: center;
+    @include flexCenter();
     flex-direction: column;
     margin: $globalMargin;
 }
 
-.education-experience-skills {
+// Skills section
+
+.skill-section-container {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    width: 100%;
 }
 
 .skill-section {
-    width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     height: min-content;
     padding-left: 20px;
+    margin: 80px 15px 0 0;
     border-left: 1px solid $mainTextColor;
-}
-
-.skill-section,
-h5,
-h4 {
     @include headerFont();
     color: $secondaryTextColor;
-    h3 {
+    .skill-header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         font-size: $mediumHeader;
         color: $mainTextColor;
+        .fas {
+            font-size: $largeIcon;
+            padding-right: 15px;
+            color: $accent1;
+        }
     }
+
     h4 {
         font-size: $default;
         margin: 20px 0 0 0;
     }
+
     h5 {
         font-size: $smallHeader;
         margin: 20px 0 7px 0;
     }
+
     .skill-text {
         @include smallTextFont();
+        font-size: $smallText;
+        margin: 5px 0;
+        color: $mainTextColor;
     }
 }
 
-.header-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.fas {
-    font-size: $largeIcon;
-    padding-right: 15px;
-    color: $accent1;
-}
-
-.skill-text {
-    font-size: $smallText;
-    margin: 5px 0;
-    color: $mainTextColor;
-}
+// Tabs Section
 
 .tabs-container {
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0 60px 60px black;
     margin: 100px 0;
-    width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     color: $secondaryTextColor;
     background-color: $mainBackground;
 }
 
-.highlight {
-    color: $accent2;
-    font-weight: 900;
-}
-
-.panel {
-    display: none;
-    padding: 20px 30px 30px;
-    background-color: $mainBackground;
-}
-
-.paradigm-text {
-    @include smallTextFont();
-    font-size: $default;
-    margin: 30px 0;
-}
-
-.radio {
+.tab {
     position: absolute;
     opacity: 0;
+    &:focus + .label {
+        z-index: 1;
+    }
+
+    &:checked + .label {
+        background-color: #2e2e2e;
+        color: $accent1;
+    }
+
+    &:checked + .label + .tab-content {
+        display: block;
+    }
 }
 
 .label {
-    width: 100%;
+    width: auto;
     padding: 20px 30px;
     background-color: $black;
     cursor: pointer;
@@ -106,48 +93,36 @@ h4 {
     @include headerFont();
     color: $secondaryTextColor;
     transition: background-color 0.1s, color 0.1s;
-}
-
-.label:hover {
-    color: $accent2;
-}
-
-.label:active {
-    background-color: rgb(68, 68, 68);
-}
-
-.radio:focus + .label {
-    z-index: 1;
-}
-
-.radio:checked + .label {
-    background-color: #2e2e2e;
-    color: $accent1;
-}
-
-.radio:checked + .label + .panel {
-    display: block;
-}
-
-@media (min-width: 800px) {
-    .tabs-container {
-        width: 75%;
+    &:hover {
+        color: $accent2;
     }
-    .label {
-        width: auto;
-    }
-    .panel {
-        order: 99;
-    }
-    .skill-section {
-        margin: 20px;
-    }
-    .paradigm-text {
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 30px 30px;
+    order: 99;
+    .tab-text {
+        @include smallTextFont();
+        font-size: $default;
         margin: 30px 100px;
+        .text-accent {
+            color: $accent2;
+            font-weight: 900;
+        }
     }
 }
+
 @media (max-width: 800px) {
     .skill-section {
-        margin-top: 80px;
+        margin: 80px 0 0 0;
+    }
+    
+    .label {
+        width: 100%;
+    }
+    
+    .tab-text {
+        margin: 30px 0 !important;
     }
 }
