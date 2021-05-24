@@ -150,9 +150,9 @@
 .bar2,
 .bar3 {
     background-color: $mainTextColor;
-    width: 50px;
+    width: 35px;
     height: 1.5px;
-    margin: 15px 0;
+    margin: 10px 0;
     transition: 0.4s;
 }
 
@@ -168,7 +168,7 @@
 
 /* Rotate last bar */
 .change .bar3 {
-    transform: rotate(45deg) translate(-15px, -15px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .hide-scroll-down {
@@ -184,7 +184,7 @@
     .mobile-nav-bar {
         display: block;
         position: fixed;
-        height: 75px;
+        height: 50px;
         width: 100%;
         background-color: $black;
         visibility: visible;
@@ -209,7 +209,7 @@
         visibility: visible;
         position: absolute;
         right: 0;
-        top: 0;
+        top: -10px;
     }
 
     .nav-links-container {
