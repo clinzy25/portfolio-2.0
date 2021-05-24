@@ -13,6 +13,7 @@ const menuBars = document.querySelector('.menu-bars');
 const navbar = document.querySelector('#navbar');
 const navLink = document.querySelectorAll('.nav-link');
 const border = document.querySelector('.border');
+const accessibilityMenu = document.querySelector('.dropdown-container');
 
 AOS.init({
     delay: 100, // values from 0 to 3000, with step 50ms
@@ -52,6 +53,10 @@ navLink.forEach((link) => {
 });
 
 let prev = 0;
+
+accessibilityMenu.addEventListener('touch', () => {
+  accessibilityMenu.classList.add('show-accessibility-menu')
+})
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
