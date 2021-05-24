@@ -54,8 +54,8 @@ navLink.forEach((link) => {
 
 let prev = 0;
 
-accessibilityMenu.addEventListener('touch', () => {
-  accessibilityMenu.classList.add('show-accessibility-menu')
+accessibilityMenu.addEventListener('click', () => {
+  accessibilityMenu.classList.toggle('show-accessibility-menu')
 })
 
 window.addEventListener('scroll', () => {
