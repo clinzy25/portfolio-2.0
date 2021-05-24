@@ -24,52 +24,55 @@
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
     border-radius: 5px;
-    
+
     &::before,
     &::after {
-      content: '';
-      position: absolute;
-      top: 1.25em;
-      bottom: 1.25em;
-      left: 1.25em;
-      right: 1.25em;
-      opacity: 1;
-      transition: transform ease-out 250ms;
-      z-index: 2;
+        content: '';
+        position: absolute;
+        top: 1.25em;
+        bottom: 1.25em;
+        left: 1.25em;
+        right: 1.25em;
+        opacity: 1;
+        transition: transform ease-out 250ms;
+        z-index: 2;
     }
-    
+
     &::before {
-      border-top: 1px solid $mainTextColor;
-      border-bottom: 1px solid $mainTextColor;
-      transform: scale(0, 1);
+        border-top: 1px solid $mainTextColor;
+        border-bottom: 1px solid $mainTextColor;
+        transform: scale(0, 1);
     }
-    
+
     &::after {
-      border-left: 1px solid $mainTextColor;
-      border-right: 1px solid $mainTextColor;
-      transform: scale(1, 0);
+        border-left: 1px solid $mainTextColor;
+        border-right: 1px solid $mainTextColor;
+        transform: scale(1, 0);
     }
-    
+
     &:hover::before {
-      transform: scale(1, 1);
+        transform: scale(1, 1);
     }
-    
+
     &:hover::after {
-      transform: scale(1, 1);
+        transform: scale(1, 1);
     }
     &:hover {
-      .project-image {
-        transform: scale(1.1);
-        filter: blur(2px) brightness(0.4);
-      }
+        .project-image {
+            transform: scale(1.1);
+            filter: blur(2px) brightness(0.4);
+        }
+        .project-links {
+            display: block;
+        }
     }
-  }
-  
-  .project-image {
+}
+
+.project-image {
     max-width: 210%;
     max-height: 150%;
     transition: transform ease-out 250ms;
-  }
+}
 
 .project-title {
     @include headerFont();
@@ -97,7 +100,7 @@
 }
 
 .project-links {
-  display: none;
+    display: none;
     padding-top: 40px;
     transition: transform ease-out 250ms;
     :hover {
