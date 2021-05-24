@@ -62,21 +62,26 @@
     }
 }
 
-.show-accessibility-menu {
-    .dropdown-content {
-        display: block;
-    }
-}
-
 .dropdown-container {
     margin: $globalMargin;
     position: relative;
     display: inline-block;
     padding-bottom: 50px;
-    &:hover {
-        .dropdown-content {
-            display: block;
+}
+
+.show-accessibility-menu-desktop {
+    .dropdown-container {
+        &:hover {
+            .dropdown-content {
+                display: block;
+            }
         }
+    }
+}
+
+.show-accessibility-menu-mobile {
+    .dropdown-content {
+        display: block;
     }
 }
 

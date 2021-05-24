@@ -52,14 +52,17 @@ navLink.forEach((link) => {
     });
 });
 
-let prev = 0;
+if (window.innerWidth < 800) {
+    accessibilityMenu.classList.remove('show-accessibility-menu-desktop');
+}
 
 accessibilityMenu.addEventListener('click', () => {
     if (window.innerWidth <= 800) {
-        accessibilityMenu.classList.toggle('show-accessibility-menu');
+        accessibilityMenu.classList.toggle('show-accessibility-menu-mobile');
     }
 });
 
+let prev = 0;
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
     if (!recentClick || scrollTop - prev > 100) {
