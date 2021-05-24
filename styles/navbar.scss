@@ -69,17 +69,7 @@
     padding-bottom: 50px;
 }
 
-.show-accessibility-menu-desktop {
-    .dropdown-container {
-        &:hover {
-            .dropdown-content {
-                display: block;
-            }
-        }
-    }
-}
-
-.show-accessibility-menu-mobile {
+.show-menu {
     .dropdown-content {
         display: block;
     }
