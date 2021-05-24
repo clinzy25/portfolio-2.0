@@ -13,7 +13,7 @@
     font-size: $navText;
     z-index: 4;
     background-color: $black;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease-out;
     box-shadow: 5px 5px 15px $shadowColor;
     color: $mainTextColor;
     a {
@@ -172,7 +172,6 @@
 }
 
 .hide-scroll-down {
-    visibility: hidden;
     transform: translateY(-100%);
 }
 
