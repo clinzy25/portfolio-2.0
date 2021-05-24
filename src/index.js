@@ -13,7 +13,6 @@ const menuBars = document.querySelector('.menu-bars');
 const navbar = document.querySelector('#navbar');
 const navLink = document.querySelectorAll('.nav-link');
 const border = document.querySelector('.border');
-const accessibilityMenu = document.querySelector('.dropdown-container');
 
 AOS.init({
     delay: 100, // values from 0 to 3000, with step 50ms
@@ -23,9 +22,11 @@ AOS.init({
 });
 
 menuBars.addEventListener('click', () => {
+    /** Transition menu bars to close icon */
     menuBars.classList.toggle('change');
+    /** Show swipe up navbar */
     navbar.classList.toggle('visibility');
-    /** Reset mobile nav animation */
+    /** Reset border animation */
     border.style.animation = 'none';
     border.offsetHeight; /* trigger reflow */
     border.style.animation = null;
@@ -34,37 +35,32 @@ menuBars.addEventListener('click', () => {
 let recentClick = false;
 
 navLink.forEach((link) => {
+    // eslint-disable-next-line prefer-arrow-callback
+    const clickTimeout = setTimeout(function () {
+        recentClick = false;
+    }, 2000);
     link.addEventListener('click', () => {
         clearInterval(clickTimeout);
         recentClick = true;
         if (window.innerWidth <= 800) {
+            /** Hide mobile swipe-up nav on click of nav-link */
             navbar.classList.toggle('visibility');
             menuBars.classList.toggle('change');
         }
-        /**
-         * Keep navbar while quickly switching between links,
-         * then reenable hide on-scroll-down
-         */
-        // eslint-disable-next-line prefer-arrow-callback
-        const clickTimeout = setTimeout(function () {
-            recentClick = false;
-        }, 2000);
+        /** For scroll event listener */
     });
 });
 
-accessibilityMenu.addEventListener('click', () => {
-    accessibilityMenu.classList.toggle('show-menu');
-});
-accessibilityMenu.addEventListener('mouseover', () => {
-    accessibilityMenu.classList.toggle('show-menu');
-});
-accessibilityMenu.addEventListener('mouseout', () => {
-    accessibilityMenu.classList.remove('show-menu');
-});
-
 let prev = 0;
+
+/**
+ *  Only hide navbar if :
+ *  NOT switching quickly between links
+ *  NOT at the top of the page
+ *  Scrolled more than 100px
+ */
 window.addEventListener('scroll', () => {
-    let scrollTop = window.scrollY;
+    const scrollTop = window.scrollY;
     if (!recentClick || scrollTop - prev > 100) {
         navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
     }

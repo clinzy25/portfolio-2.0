@@ -4,55 +4,53 @@
 // Desktop
 #navbar {
     display: flex;
-    align-self: flex-start;
     justify-content: space-between;
     position: fixed;
     width: 100%;
     height: 75px;
-    @include headerFont();
-    font-size: $navText;
     z-index: 4;
+    @include headerFont();
+    color: $mainTextColor;
+    font-size: $navText;
     background-color: $black;
     transition: transform 0.2s ease-out;
     box-shadow: 5px 5px 15px $shadowColor;
-    color: $mainTextColor;
     a {
         color: $mainTextColor;
+        text-decoration: none;
+        padding: 15px 0;
+        transition: color 0.2s ease;
         &:hover {
             color: $accent2;
         }
     }
-}
 
-.mobile-nav-bar {
-    display: none;
-}
+    #logo {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+    }
+    .nav-links-container {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        .nav-link {
+            padding: 0 20px;
+            border-left: 2px solid $mainTextColor;
+        }
 
-#logo {
-    height: 60px;
-    width: 60px;
-    padding: 10px;
-}
-
-.nav-links-container {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    padding: 0;
-    a {
-        text-decoration: none;
-        padding: 15px 0;
-        transition: color 0.2s ease;
+        .no-border {
+            border-left: 0;
+        }
     }
 }
 
-.nav-link {
-    padding: 0 20px;
-    border-left: 2px solid $mainTextColor;
-}
-
 // Accessibility Dropdown
-.accessibility {
+.dropdown-container {
+    margin: $globalMargin;
+    position: relative;
+    padding-bottom: 50px;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.2s ease;
@@ -60,79 +58,55 @@
     &:hover {
         color: $accent2;
     }
-}
 
-.dropdown-container {
-    margin: $globalMargin;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 50px;
-}
-
-.show-menu {
     .dropdown-content {
-        display: block;
-    }
-}
-
-.dropdown-content {
-    position: absolute;
-    display: none;
-    right: 2px;
-    top: 50px;
-    height: min-content;
-    width: min-content;
-    white-space: nowrap;
-    color: $lightMainTextColor;
-    background-color: $secondaryBackground;
-    border-radius: 5px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.616);
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    li {
+        position: absolute;
+        display: none;
+        right: 0;
+        top: 50px;
+        height: min-content;
+        width: min-content;
+        white-space: nowrap;
+        color: $lightMainTextColor;
+        background-color: $secondaryBackground;
         border-radius: 5px;
-        padding: 15px;
-        cursor: pointer;
-        user-select: none;
-        &:hover {
-            background-color: rgb(177, 177, 177);
-            .fas {
-                color: $accent2;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.616);
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+            &:hover {
+                background-color: rgb(177, 177, 177);
+                .fas {
+                    color: $accent2;
+                }
             }
         }
+
+        .fas {
+            font-size: $smallIcon;
+            color: $black;
+            padding-right: 10px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $secondaryBackground;
+            right: 30%;
+            top: -10px;
+        }
     }
-
-    .fas {
-        font-size: $smallIcon;
-        color: $black;
-        padding-right: 10px;
-    }
-
-    &:before {
-        content: '';
-        height: 0;
-        width: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid $secondaryBackground;
-        right: 30%;
-        top: -10px;
-        position: absolute;
-    }
-}
-
-.disabled {
-    color: rgb(104, 104, 104);
-}
-
-.active {
-    color: white;
-    background-color: rgb(107, 107, 107);
 }
 
 // Mobile
@@ -142,10 +116,6 @@
     visibility: hidden;
     padding: 5px 10px 0 15px;
     background-color: $black;
-}
-
-.menu-bars-light {
-    background-color: $lightMainTextColor !important;
 }
 
 .bar1,
@@ -173,15 +143,42 @@
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+// Dynamic Classes
+
+// Hide mobile navbar on desktop
+.mobile-nav-bar {
+    display: none;
+}
+
+// Show dropdown menu in mobile and desktop
+.show-menu {
+    .dropdown-content {
+        display: block;
+    }
+}
+
+// For font-change buttons when min/max has been reached
+.disabled {
+    color: rgb(104, 104, 104);
+}
+
+// When accessibility type is active
+.active {
+    color: white;
+    background-color: rgb(107, 107, 107);
+}
+// Hide navbar when scrolling down
 .hide-scroll-down {
     transform: translateY(-100%);
 }
 
+// Hide expanding div until mobile nav appears
 .border {
     display: none;
 }
 
 @media only screen and (max-width: 800px) {
+    // Top navigation
     .mobile-nav-bar {
         display: block;
         position: fixed;
@@ -190,19 +187,11 @@
         background-color: $black;
         visibility: visible;
         box-shadow: 5px 5px 10px black;
-    }
-
-    .menu-bars {
-        visibility: visible;
-        cursor: pointer;
-        z-index: -1;
-    }
-
-    #navbar {
-        height: 100%;
-        visibility: hidden;
-        z-index: 5;
-        background-color: $mainBackground;
+        .menu-bars {
+            visibility: visible;
+            cursor: pointer;
+            z-index: -1;
+        }
     }
 
     .dropdown-container {
@@ -213,40 +202,44 @@
         top: -10px;
     }
 
-    .nav-links-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
+    // Slide up navigation
+    #navbar {
         height: 100%;
-        font-size: $largeHeader;
-    }
-
-    .nav-link {
-        border: 0;
-        padding: 50px 100%;
-    }
-
-    .border {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50px;
-        width: 3px;
-        height: 20px;
-        background-color: $accent1;
-        animation: grow 3s forwards;
-    }
-
-    .animation {
-        @keyframes grow {
-            0% {
-                height: 0px;
-                bottom: 0;
+        visibility: hidden;
+        z-index: 5;
+        background-color: $mainBackground;
+        .nav-links-container {
+            flex-direction: column;
+            justify-content: center;
+            width: 100vw;
+            font-size: $largeHeader;
+            .nav-link {
+                border: 0;
+                padding: 50px 100%;
             }
-            100% {
-                height: 80%;
-                bottom: 0;
+        }
+
+        .border {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            width: 3px;
+            height: 20px;
+            background-color: $accent1;
+            animation: grow 3s forwards;
+        }
+
+        .animation {
+            @keyframes grow {
+                0% {
+                    height: 0px;
+                    bottom: 0;
+                }
+                100% {
+                    height: 80%;
+                    bottom: 0;
+                }
             }
         }
     }
@@ -258,16 +251,19 @@
         #logo {
             display: none;
         }
+        
         .accessibility {
             visibility: hidden;
         }
+        
         .dropdown-container {
             pointer-events: none;
         }
+        
         .menu-bars {
-            box-shadow: none;
             background-color: $mainBackground;
         }
+        
         .mobile-nav-bar {
             visibility: hidden;
         }

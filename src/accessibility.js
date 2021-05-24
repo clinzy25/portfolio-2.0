@@ -4,15 +4,10 @@ const fontDecBtn = document.querySelector('.font-dec');
 const grayScaleBtn = document.querySelector('.grayscale');
 const contrastBtn = document.querySelector('.high-contrast');
 const html = document.querySelector('html');
+const accessibilityMenu = document.querySelector('.dropdown-container');
 // For Dark Mode
 const backgroundImage = document.querySelector('.about-background');
-const navbar = document.querySelector('#navbar');
 const menuBars = document.querySelector('.menu-bars');
-const menuBar = document.querySelectorAll('.bar');
-const logo = document.querySelector('#logo');
-const navText = document.querySelectorAll('a');
-const navLink = document.querySelectorAll('.nav-link');
-const accessibility = document.querySelector('.accessibility');
 const skillHeader = document.querySelectorAll('h3');
 const skillText = document.querySelectorAll('.skill-text');
 const skillSection = document.querySelectorAll('.skill-section');
@@ -23,59 +18,57 @@ const formMessage = document.querySelector('.text-area');
 const submitBtn = document.querySelector('.submit-btn');
 const footer = document.querySelector('#footer');
 
-let darkMode = true;
+accessibilityMenu.addEventListener('click', () => {
+  accessibilityMenu.classList.toggle('show-menu');
+});
+
+accessibilityMenu.addEventListener('mouseover', () => {
+  accessibilityMenu.classList.toggle('show-menu');
+});
+
+accessibilityMenu.addEventListener('mouseout', () => {
+  accessibilityMenu.classList.remove('show-menu');
+});
+
+
 let fontSize = 1;
-let grayScale = false;
-let highContrast = false;
 
 const disableBtn = () => {
-    if (fontSize === 0.8) {
-        fontDecBtn.classList.add('disabled');
-    }
-    if (fontSize === 1.3) {
-        fontIncBtn.classList.add('disabled');
-    }
-    if (fontSize !== 0.8) {
-        fontDecBtn.classList.remove('disabled');
-    }
-    if (fontSize !== 1.3) {
-        fontIncBtn.classList.remove('disabled');
-    }
+  if (fontSize === 0.8) {
+    fontDecBtn.classList.add('disabled');
+  }
+  if (fontSize === 1.3) {
+    fontIncBtn.classList.add('disabled');
+  }
+  if (fontSize !== 0.8) {
+    fontDecBtn.classList.remove('disabled');
+  }
+  if (fontSize !== 1.3) {
+    fontIncBtn.classList.remove('disabled');
+  }
 };
 
 const increaseFontSize = () => {
-    if (fontSize < 1.3) {
-        fontSize += 0.1;
-        fontSize = +fontSize.toFixed(1);
-        html.style['font-size'] = `${fontSize}rem`;
-    }
-    disableBtn();
+  if (fontSize < 1.3) {
+    fontSize += 0.1;
+    fontSize = +fontSize.toFixed(1);
+    html.style['font-size'] = `${fontSize}rem`;
+  }
+  disableBtn();
 };
 
 const decreaseFontSize = () => {
-    if (fontSize > 0.8) {
-        fontSize -= 0.1;
-        fontSize = +fontSize.toFixed(1);
-        html.style['font-size'] = `${fontSize}rem`;
-    }
-    disableBtn();
+  if (fontSize > 0.8) {
+    fontSize -= 0.1;
+    fontSize = +fontSize.toFixed(1);
+    html.style['font-size'] = `${fontSize}rem`;
+  }
+  disableBtn();
 };
 
 const toggleDarkMode = () => {
     html.classList.toggle('light-global');
-    navbar.classList.toggle('light-global');
-    menuBars.classList.toggle('light-global');
-    accessibility.classList.toggle('light-text');
-    accessibility.classList.toggle('light-global');
-    navText.forEach((item) => {
-        item.classList.toggle('light-text');
-    });
-    navLink.forEach((item) => {
-        item.classList.toggle('light-border');
-    });
-    menuBar.forEach((item) => {
-        item.classList.toggle('menu-bars-light');
-    });
+    menuBars.classList.toggle('light-text');
 
     backgroundImage.classList.toggle('light-about-background');
 
@@ -104,33 +97,16 @@ const toggleDarkMode = () => {
     formMessage.classList.toggle('form-border');
     submitBtn.classList.toggle('light-text');
     footer.classList.toggle('light-global');
-    darkMode = !darkMode;
-    if (darkMode) logo.src = './images/logo-white.png';
-    if (!darkMode) logo.src = './images/logo-black.png';
 };
 
 const toggleGreyScale = () => {
-    if (!grayScale) {
-        html.classList.add('grayscale');
-        grayScaleBtn.classList.add('active');
-    }
-    if (grayScale) {
-        html.classList.remove('grayscale');
-        grayScaleBtn.classList.remove('active');
-    }
-    grayScale = !grayScale;
+    html.classList.toggle('grayscale');
+    grayScaleBtn.classList.toggle('active');
 };
 
 const toggleContrast = () => {
-    if (!highContrast) {
-        html.classList.add('high-contrast');
-        contrastBtn.classList.add('active');
-    }
-    if (highContrast) {
-        html.classList.remove('high-contrast');
-        contrastBtn.classList.remove('active');
-    }
-    highContrast = !highContrast;
+    html.classList.toggle('high-contrast');
+    contrastBtn.classList.toggle('active');
 };
 
 fontIncBtn.addEventListener('click', () => increaseFontSize());
