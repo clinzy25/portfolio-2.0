@@ -4,7 +4,8 @@
 #footer {
     @include flexCenter();
     align-self: flex-end;
-    height: 75px;
+    flex-flow: wrap;
+    height: min-content;
     background-color: $black;
 }
 
@@ -14,8 +15,21 @@
     margin: 20px;
 }
 
+#wcb {
+    position: absolute;
+    right: 0;
+    margin: 20px 10px 0 0;
+}
+
 .footer-text {
     @include smallTextFont();
     font-size: $smallText;
     color: $secondaryTextColor;
+}
+
+@media only screen and (max-width: 800px) {
+    #wcb {
+        position: static;
+        margin: 0;
+    }
 }
