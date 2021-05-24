@@ -53,7 +53,7 @@ navLink.forEach((link) => {
 });
 
 accessibilityMenu.addEventListener('mouseover', () => {
-    accessibilityMenu.classList.add('show-menu');
+    accessibilityMenu.classList.toggle('show-menu');
 });
 accessibilityMenu.addEventListener('mouseout', () => {
     accessibilityMenu.classList.remove('show-menu');

@@ -20,7 +20,7 @@
 
 .hello-container {
     position: absolute;
-    left: 0;
+    left: 10%;
     margin: $globalMargin;
     font-size: 8rem;
     @include xlHeaderFont();
@@ -28,7 +28,6 @@
     white-space: nowrap;
     line-height: 30vh;
 }
-
 
 .about-background {
     height: 50%;
@@ -57,9 +56,13 @@
         width: 75%;
         font-size: 1rem;
     }
-    .hello,
-    .hello-end-bracket {
-        font-size: 5rem;
-        line-height: 350px;
+
+    .hello-container {
+        left: 0;
+        .hello,
+        .hello-end-bracket {
+            font-size: 5rem;
+            line-height: 350px;
+        }
     }
 }
