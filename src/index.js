@@ -35,12 +35,7 @@ menuBars.addEventListener('click', () => {
 let recentClick = false;
 
 navLink.forEach((link) => {
-    // eslint-disable-next-line prefer-arrow-callback
-    const clickTimeout = setTimeout(function () {
-        recentClick = false;
-    }, 2000);
     link.addEventListener('click', () => {
-        clearInterval(clickTimeout);
         recentClick = true;
         if (window.innerWidth <= 800) {
             /** Hide mobile swipe-up nav on click of nav-link */
@@ -48,6 +43,10 @@ navLink.forEach((link) => {
             menuBars.classList.toggle('change');
         }
         /** For scroll event listener */
+        // eslint-disable-next-line prefer-arrow-callback
+        setTimeout(function () {
+            recentClick = false;
+        }, 2000);
     });
 });
 

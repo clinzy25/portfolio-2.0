@@ -23,7 +23,7 @@ accessibilityMenu.addEventListener('click', () => {
 });
 
 accessibilityContent.addEventListener('mouseover', () => {
-    accessibilityContent.classList.toggle('show-menu');
+    accessibilityContent.classList.add('show-menu');
 });
 
 accessibilityContent.addEventListener('mouseout', () => {
@@ -69,9 +69,7 @@ const decreaseFontSize = () => {
 const toggleDarkMode = () => {
     html.classList.toggle('light-global');
     menuBars.classList.toggle('light-text');
-
     backgroundImage.classList.toggle('light-about-background');
-
     skillHeader.forEach((item) => {
         item.classList.toggle('light-text');
     });
