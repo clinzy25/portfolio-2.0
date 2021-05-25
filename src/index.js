@@ -8,6 +8,8 @@ import './images/logo-white.png';
 import './images/metal-white.png';
 import './images/small-web-projects.jpg';
 import './images/time-blocker.jpg';
+import './images/favicon.png';
+import './conner-linzy-resume.pdf';
 
 const menuBars = document.querySelector('.menu-bars');
 const navbar = document.querySelector('#navbar');

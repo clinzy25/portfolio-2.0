@@ -17,6 +17,7 @@ const paradigmText = document.querySelectorAll('.tab-text');
 const formInput = document.querySelectorAll('.form-input');
 const formMessage = document.querySelector('.text-area');
 const submitBtn = document.querySelector('.submit-btn');
+const resumeBtn = document.querySelector('.resume-btn');
 
 accessibilityMenu.addEventListener('click', () => {
     accessibilityContent.classList.add('show-menu');
@@ -94,6 +95,7 @@ const toggleDarkMode = () => {
     formMessage.classList.toggle('light-text');
     formMessage.classList.toggle('form-border');
     submitBtn.classList.toggle('light-text');
+    resumeBtn.classList.toggle('light-text');
 };
 
 const toggleGreyScale = () => {
