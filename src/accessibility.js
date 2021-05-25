@@ -19,7 +19,7 @@ const formMessage = document.querySelector('.text-area');
 const submitBtn = document.querySelector('.submit-btn');
 
 accessibilityMenu.addEventListener('click', () => {
-    accessibilityContent.classList.toggle('show-menu');
+    accessibilityContent.classList.add('show-menu');
 });
 
 accessibilityContent.addEventListener('mouseover', () => {
