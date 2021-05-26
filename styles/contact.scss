@@ -96,6 +96,7 @@
         width: 50%;
         @include headerFont();
         cursor: pointer;
+        margin-top: 40px;
         padding: 10px 50px;
         font-size: $smallText;
     }

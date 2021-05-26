@@ -86,7 +86,8 @@
             &:hover {
                 background-color: rgb(177, 177, 177);
                 .fas {
-                    color: $accent2;
+                    transform: scale(1.3);
+                    color: red;
                 }
             }
         }
