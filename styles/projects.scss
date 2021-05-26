@@ -110,7 +110,7 @@
 
             .project-btn {
                 @include button();
-                padding: 7px 50px;
+                padding: 7px 30px;
                 font-size: $navText;
                 border-color: $mainTextColor;
                 .fas {
@@ -160,7 +160,7 @@
         .project-text {
             opacity: 1;
             .project-links {
-                padding-top: 0px;
+                padding-top: 15px;
                 .project-btn {
                     background-color: $accent1;
                     color: #000;

@@ -18,7 +18,7 @@
     }
     .resume-btn {
         @include button();
-        font-size: $smallText;
+        font-size: $smallHeader;
         padding: 7px 30px;
     }
 }
