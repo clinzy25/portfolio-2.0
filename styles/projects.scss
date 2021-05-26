@@ -113,6 +113,11 @@
                 padding: 7px 50px;
                 font-size: $navText;
                 border-color: $mainTextColor;
+                .fas {
+                    &:hover {
+                        color: #000;
+                    }
+                }
             }
         }
     }
