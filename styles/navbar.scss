@@ -13,7 +13,7 @@
     color: $mainTextColor;
     font-size: $navText;
     background-color: $black;
-    box-shadow: 5px 5px 15px $shadowColor;
+    box-shadow: 0 5px 15px $shadowColor;
     transition: transform 0.3s ease-out;
     a {
         color: $mainTextColor;
@@ -30,7 +30,7 @@
         width: 60px;
         padding: 10px;
     }
-    
+
     .nav-links-container {
         display: flex;
         align-items: center;
@@ -114,7 +114,6 @@
     }
 }
 
-
 // Mobile
 
 .menu-bars {
@@ -149,7 +148,6 @@
 .change .bar3 {
     transform: rotate(45deg) translate(-8px, -8px);
 }
-
 
 // Dynamic Classes
 
