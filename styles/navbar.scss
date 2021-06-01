@@ -14,6 +14,7 @@
     font-size: $navText;
     background-color: $black;
     box-shadow: 5px 5px 15px $shadowColor;
+    transition: transform 0.3s ease-out;
     a {
         color: $mainTextColor;
         text-decoration: none;
