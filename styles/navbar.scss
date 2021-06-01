@@ -13,7 +13,6 @@
     color: $mainTextColor;
     font-size: $navText;
     background-color: $black;
-    transition: transform 0.2s ease-out;
     box-shadow: 5px 5px 15px $shadowColor;
     a {
         color: $mainTextColor;
@@ -29,6 +28,10 @@
         height: 60px;
         width: 60px;
         padding: 10px;
+        transition: transform 0.2s ease-out;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .nav-links-container {
         display: flex;
@@ -53,7 +56,6 @@
     padding-bottom: 50px;
     text-decoration: none;
     cursor: pointer;
-    transition: color 0.2s ease;
     user-select: none;
     &:hover {
         color: $accent2;
@@ -67,9 +69,10 @@
         height: min-content;
         width: min-content;
         white-space: nowrap;
-        color: $lightMainTextColor;
-        background-color: $secondaryBackground;
+        color: $secondaryTextColor;
+        background-color: $mainBackground;
         border-radius: 5px;
+        border: 1px solid $secondaryTextColor;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.616);
 
         ul {
@@ -83,18 +86,21 @@
             padding: 15px;
             cursor: pointer;
             user-select: none;
+            transition: all 0.3s ease;
             &:hover {
-                background-color: rgb(177, 177, 177);
+                background-color: rgb(43, 43, 43);
+                color: $accent2;
                 .fas {
+                    transition: all 0.3s ease;
                     transform: scale(1.3);
-                    color: red;
+                    color: $accent2;
                 }
             }
         }
 
         .fas {
             font-size: $smallIcon;
-            color: $black;
+            color: $secondaryTextColor;
             padding-right: 10px;
         }
 
@@ -103,7 +109,7 @@
             position: absolute;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-bottom: 10px solid $secondaryBackground;
+            border-bottom: 10px solid $secondaryTextColor;
             right: 30%;
             top: -10px;
         }
