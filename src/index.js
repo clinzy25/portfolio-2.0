@@ -1,13 +1,13 @@
 import '../styles/index.scss';
-import './images/ecommerce.jpg';
-import './images/exercism.jpg';
-import './images/github.jpg';
-import './images/javascript.png';
+import './project-images/ecommerce.jpeg';
+import './project-images/exercism.jpg';
+import './project-images/github.jpeg';
+import './project-images/javascript.jpg';
 import './images/logo-black.png';
 import './images/logo-white.png';
 import './images/metal-white.png';
-import './images/small-web-projects.jpg';
-import './images/time-blocker.jpg';
+import './project-images/small-web-projects.jpeg';
+import './project-images/time-blocker.jpeg';
 import './images/favicon.png';
 import './conner-linzy-resume.pdf';
 
