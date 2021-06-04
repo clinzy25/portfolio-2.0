@@ -23,7 +23,7 @@ AOS.init({
     duration: 800, // values from 0 to 3000, with step 50ms
     easing: 'ease-out-quart', // default easing for AOS animations
     mirror: true, // whether elements should animate out while scrolling past them
-    offset: 200,
+    offset: 50,
 });
 
 menuBars.addEventListener('click', () => {
