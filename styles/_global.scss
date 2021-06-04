@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&family=Kanit:wght@500&family=Nunito+Sans&family=Share+Tech+Mono&display=swap');
 @import '_variables';
+$aos-distance: 20px; // It has to be above import
+@import 'node_modules/aos/src/sass/aos.scss';
 
 html {
     box-sizing: border-box;
