@@ -7,9 +7,10 @@
 
 .text-container {
     width: 50%;
+    max-width: 900px;
     @include smallTextFont();
     font-size: $largeText;
-    color: $secondaryTextColor;
+    color: $mainTextColor;
     #conner-linzy {
         display: inline-block;
         font-family: 'Kanit', sans-serif;

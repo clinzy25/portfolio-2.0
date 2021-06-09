@@ -9,9 +9,11 @@ const accessibilityContent = document.querySelector('.dropdown-container');
 // For Dark Mode
 const backgroundImage = document.querySelector('.about-background');
 const menuBars = document.querySelector('.menu-bars');
+const aboutText = document.querySelector('.about-text');
 const skillHeader = document.querySelectorAll('h3');
 const skillText = document.querySelectorAll('.skill-text');
 const skillSection = document.querySelectorAll('.skill-section');
+const tabsContainer = document.querySelector('.tabs-container')
 const panel = document.querySelectorAll('.tab-content');
 const paradigmText = document.querySelectorAll('.tab-text');
 const formInput = document.querySelectorAll('.form-input');
@@ -71,6 +73,8 @@ const toggleDarkMode = () => {
     html.classList.toggle('light-global');
     menuBars.classList.toggle('light-text');
     backgroundImage.classList.toggle('light-about-background');
+    aboutText.classList.toggle('light-text');
+    tabsContainer.classList.toggle('less-box-shadow');
     skillHeader.forEach((item) => {
         item.classList.toggle('light-text');
     });
