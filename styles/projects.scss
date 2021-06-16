@@ -77,14 +77,11 @@
             opacity: 1;
         }
     }
+
     .project-image {
         width: 170%;
         min-height: 100%;
         transition: transform ease-out 250ms;
-    }
-    
-    .exercism {
-      width: 100%;
     }
 
     .project-text {

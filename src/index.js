@@ -3,9 +3,9 @@ import 'aos/dist/aos.css';
 
 import '../styles/index.scss';
 import './project-images/ecommerce.jpeg';
-import './project-images/exercism.jpg';
 import './project-images/github.jpeg';
 import './project-images/javascript.jpg';
+import './project-images/shopify.jpeg';
 import './images/logo.png';
 import './images/metal-white.png';
 import './project-images/small-web-projects.jpeg';
