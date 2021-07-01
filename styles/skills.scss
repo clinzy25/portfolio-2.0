@@ -52,16 +52,23 @@
         font-size: $smallText;
         margin: 5px 0;
         color: $mainTextColor;
+        line-height: 25px;
     }
 }
 
 // Tabs Section
 
+.skills-header {
+    @include headerFont();
+    color: $accent1;
+    margin: 100px 0 0 30px;
+}
+
 .tabs-container {
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0 60px 60px black;
-    margin: 100px 0;
+    margin: 25px 0 100px 0;
     max-width: 1000px;
     color: $secondaryTextColor;
     background-color: $mainBackground;
@@ -86,7 +93,7 @@
 
 .label {
     width: auto;
-    flex: 1;
+    // flex: 1;
     text-align: center;
     white-space: nowrap;
     padding: 20px 30px;
@@ -133,5 +140,10 @@
 
     .tab-text {
         margin: 30px 0 !important;
+    }
+}
+@media (min-width: 800px) {
+    .label {
+      flex: 1;
     }
 }

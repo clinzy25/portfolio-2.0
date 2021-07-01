@@ -16,12 +16,13 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
     margin: 5px;
     border-radius: 25px;
+    transition: all 0.1s ease-in;
     &:hover,
     &:active {
         background: $accent1;
         color: #000;
-        transition: all 0.1s ease-in;
         transform: scale(1.05);
+        transform: translateY(-3px);
         box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
     }
 }
@@ -33,11 +34,18 @@
 }
 
 @mixin headerFont {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Exo', sans-serif;
     letter-spacing: 3px;
 }
 
 @mixin xlHeaderFont {
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     color: $accent1;
+}
+
+@mixin navFont {
+    font-family: 'Exo', sans-serif;
+    color: $secondaryTextColor;
+    letter-spacing: 3px;
+    font-weight: 800;
 }

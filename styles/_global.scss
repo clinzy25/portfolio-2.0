@@ -2,6 +2,8 @@
 @import '_variables';
 $aos-distance: 20px; // It has to be above import
 @import 'node_modules/aos/src/sass/aos.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
 
 html {
     box-sizing: border-box;

@@ -10,9 +10,16 @@
     height: 100%;
     margin: $globalMargin;
     .form-header {
+        @include headerFont();
         font-size: $largeHeader;
         margin: $globalMargin;
         color: $accent1;
+    }
+    
+    .open-to-work {
+        @include smallTextFont();
+        color: $secondaryTextColor;
+        text-align: center;
     }
 
     .social-icons {
@@ -98,7 +105,6 @@
         cursor: pointer;
         margin-top: 40px;
         padding: 10px 50px;
-        font-size: $smallText;
     }
 }
 
