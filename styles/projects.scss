@@ -2,16 +2,13 @@
 @import './mixins';
 
 #projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: [header] auto auto;
     padding-top: 75px;
 }
 
 .projects-header {
-    grid-area: 1 / 1 / 2 / span 3;
     display: flex;
-    margin: $globalMargin;
+    align-items: center;
+    margin-left: 100px;
     color: $accent1;
     @include xlHeaderFont();
     font-size: 4rem;
@@ -21,150 +18,63 @@
         align-self: center;
         height: 1px;
         width: 100%;
-        margin: 0 40px;
     }
 }
 
 .project {
-    margin: $globalMargin;
-    height: 500px;
-    overflow: hidden;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.418);
-
-    // Hover Effect
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: 1.25em;
-        bottom: 1.25em;
-        left: 1.25em;
-        right: 1.25em;
-        opacity: 1;
-        transition: transform ease-out 250ms;
-        z-index: 2;
-    }
-
-    &::before {
-        border-top: 1px solid $mainTextColor;
-        border-bottom: 1px solid $mainTextColor;
-        transform: scale(0, 1);
-    }
-
-    &::after {
-        border-left: 1px solid $mainTextColor;
-        border-right: 1px solid $mainTextColor;
-        transform: scale(1, 0);
-    }
-
-    &:hover::before {
-        transform: scale(1, 1);
-    }
-
-    &:hover::after {
-        transform: scale(1, 1);
-    }
-
-    &:hover {
-        .project-image {
-            transform: scale(1.1);
-            filter: blur(2px) brightness(0.4);
-        }
-
-        .project-text {
-            opacity: 1;
-        }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    width: 100%;
+    margin: 100px 0;
 
     .project-image {
-        width: 170%;
-        min-height: 100%;
-        transition: transform ease-out 250ms;
+        width: 50%;
+        min-width: 350px;
+    }
+
+    .project-title {
+        @include headerFont();
+        font-size: $largeHeader;
+        color: $mainTextColor;
+        margin-top: 0;
     }
 
     .project-text {
-        position: absolute;
-        z-index: 3;
-        top: 50%;
-        left: 50%;
-        width: 75%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        margin: 0 $globalMargin;
+    }
+
+    .project-description {
         color: $mainTextColor;
         letter-spacing: 1px;
-        opacity: 0;
         @include smallTextFont();
-        transition: opacity ease-out 250ms;
-        .project-title {
-            @include headerFont();
-            font-size: $largeHeader;
-            color: $mainTextColor;
-        }
-
-        .project-links {
-            padding-top: 40px;
-            transition: transform ease-out 250ms;
-            :hover {
-                color: $accent1;
-            }
-
-            .project-btn {
-                @include button();
-                padding: 7px 30px;
-                border-color: $mainTextColor;
-                .fas {
-                    &:hover {
-                        color: #000;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 1500px) {
-    #projects {
-        grid-template-columns: repeat(2, 1fr);
     }
 
-    .projects-header {
-        grid-area: 1 / 1 / 2 / span 2;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    #projects {
-        grid-template-columns: 1fr;
-    }
-
-    .projects-header {
-        font-size: 3.5rem;
-        grid-area: 1 / 1 / 2 / span 1;
-        .projects-hr {
-            display: none;
-        }
-    }
-    .project {
-        &::before {
-            transform: scale(1, 1);
+    .project-links {
+        padding-top: 30px;
+        transition: transform ease-out 250ms;
+        :hover {
+            color: $accent1;
         }
 
-        &::after {
-            transform: scale(1, 1);
-        }
-        .project-image {
-            filter: blur(2px) brightness(0.4);
-        }
-        .project-text {
-            opacity: 1;
-            .project-links {
-                padding-top: 15px;
-                .project-btn {
-                    background-color: $accent1;
+        .project-btn {
+            @include button();
+            padding: 7px 30px;
+            border-color: $mainTextColor;
+            .fas {
+                &:hover {
                     color: #000;
                 }
             }
         }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .project-text {
+        width: 40%;
     }
 }

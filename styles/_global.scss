@@ -19,7 +19,7 @@ body {
     overflow-x: hidden;
     grid-template-rows:
         [about] 100vh [skills] auto [projects] auto
-        [contact footer] 100vh;
+        [contact footer] auto;
 }
 
 .light-global {

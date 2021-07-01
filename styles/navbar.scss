@@ -11,7 +11,6 @@
     z-index: 4;
     @include navFont();
     color: $secondaryTextColor;
-    font-size: $navText;
     background-color: $black;
     box-shadow: 0 5px 15px $shadowColor;
     transition: transform 0.3s ease-out;
@@ -215,7 +214,7 @@
             flex-direction: column;
             justify-content: center;
             width: 100vw;
-            font-size: $largeHeader;
+            font-size: 1.5rem;
             .nav-link {
                 border: 0;
                 padding: 50px 100%;

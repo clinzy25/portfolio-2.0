@@ -2,14 +2,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import '../styles/index.scss';
-import './project-images/ecommerce.jpeg';
-import './project-images/github.jpeg';
-import './project-images/javascript.jpg';
-import './project-images/shopify.jpeg';
+import './project-images/ecommerce.png';
+import './project-images/chat-app.png';
+import './project-images/spacex.png';
+import './project-images/github.png';
+import './project-images/shopify.png';
 import './images/logo.png';
 import './images/metal-white.png';
-import './project-images/small-web-projects.jpeg';
-import './project-images/time-blocker.jpeg';
+import './project-images/small-web.png';
+import './project-images/time-blocker.png';
 import './images/favicon.png';
 import './conner-linzy-resume.pdf';
 

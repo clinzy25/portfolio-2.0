@@ -16,10 +16,11 @@
         margin: $globalMargin;
         color: $accent2;
     }
-    
+
     .open-to-work {
         @include smallTextFont();
         color: $secondaryTextColor;
+        margin: $globalMargin;
         text-align: center;
     }
 
@@ -112,6 +113,7 @@
 @media only screen and (max-width: 800px) {
     #contact-form {
         width: 90%;
+        margin: 50px 0 200px 0;
         .form-input {
             height: 55px;
         }
@@ -128,4 +130,10 @@
             color: #000;
         }
     }
+}
+@media only screen and (min-width: 800px) {
+  .contact-container{
+    height: 100vh;
+    
+  }
 }
