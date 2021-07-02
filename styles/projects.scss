@@ -8,10 +8,10 @@
 .projects-header {
     display: flex;
     align-items: center;
-    margin-left: 100px;
+    margin-left: $globalMargin;
     color: $accent1;
     @include xlHeaderFont();
-    font-size: 4rem;
+    font-size: 3rem;
     .projects-hr {
         border-style: none;
         background-color: $accent1;
@@ -76,5 +76,8 @@
 @media only screen and (min-width: 900px) {
     .project-text {
         width: 40%;
+    }
+    .projects-header {
+        margin-left: 100px;
     }
 }
