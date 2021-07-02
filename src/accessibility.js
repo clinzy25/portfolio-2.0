@@ -7,15 +7,19 @@ const html = document.querySelector('html');
 const accessibilityMenu = document.querySelector('.accessibility');
 const accessibilityContent = document.querySelector('.dropdown-container');
 // For Dark Mode
-const backgroundImage = document.querySelector('.about-background');
+const aboutBackgroundImage = document.querySelector('.about-background');
+const contactBackgroundImage = document.querySelector('.contact-container');
 const menuBars = document.querySelector('.menu-bars');
 const aboutText = document.querySelector('.about-text');
 const skillHeader = document.querySelectorAll('h3');
 const skillText = document.querySelectorAll('.skill-text');
 const skillSection = document.querySelectorAll('.skill-section');
-const tabsContainer = document.querySelector('.tabs-container')
+const tabsContainer = document.querySelector('.tabs-container');
 const panel = document.querySelectorAll('.tab-content');
 const paradigmText = document.querySelectorAll('.tab-text');
+const projectDescription = document.querySelectorAll('.project-description');
+const projectTitle = document.querySelectorAll('.project-title');
+const projectBtn = document.querySelectorAll('.project-btn');
 const formInput = document.querySelectorAll('.form-input');
 const formMessage = document.querySelector('.text-area');
 const submitBtn = document.querySelector('.submit-btn');
@@ -72,7 +76,7 @@ const decreaseFontSize = () => {
 const toggleDarkMode = () => {
     html.classList.toggle('light-global');
     menuBars.classList.toggle('light-text');
-    backgroundImage.classList.toggle('light-about-background');
+    aboutBackgroundImage.classList.toggle('light-about-background');
     aboutText.classList.toggle('light-text');
     tabsContainer.classList.toggle('less-box-shadow');
     skillHeader.forEach((item) => {
@@ -90,6 +94,15 @@ const toggleDarkMode = () => {
     paradigmText.forEach((item) => {
         item.classList.toggle('light-text');
     });
+    projectTitle.forEach((item) => {
+        item.classList.toggle('light-text');
+    });
+    projectDescription.forEach((item) => {
+        item.classList.toggle('light-text');
+    });
+    projectBtn.forEach((item) => {
+        item.classList.toggle('light-text');
+    });
     formInput.forEach((item) => {
         item.classList.toggle('light-global');
         item.classList.toggle('light-text');
@@ -98,6 +111,7 @@ const toggleDarkMode = () => {
     formMessage.classList.toggle('light-global');
     formMessage.classList.toggle('light-text');
     formMessage.classList.toggle('form-border');
+    contactBackgroundImage.classList.toggle('light-contact-background');
     submitBtn.classList.toggle('light-text');
     resumeBtn.classList.toggle('light-text');
 };
