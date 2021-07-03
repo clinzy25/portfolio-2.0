@@ -49,8 +49,7 @@ navLink.forEach((link) => {
             menuBars.classList.toggle('change');
         }
         /** For scroll event listener */
-        // eslint-disable-next-line prefer-arrow-callback
-        setTimeout(function () {
+        setTimeout(() => {
             recentClick = false;
         }, 2000);
     });
@@ -60,14 +59,16 @@ navLink.forEach((link) => {
  *  Only hide navbar if :
  *  NOT switching quickly between links
  *  NOT at the top of the page
- *  Scrolled more than 100px
  */
 let prev = 0;
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
-    if (!recentClick || scrollTop - prev > 100) {
+    if (!recentClick) {
         navbar.classList.toggle('hide-scroll-down', scrollTop > prev);
     }
-    if (scrollTop < 100) navbar.classList.remove('hide-scroll-down');
+    
+    if (scrollTop < 100) {
+        navbar.classList.remove('hide-scroll-down');
+    }
     prev = scrollTop;
 });

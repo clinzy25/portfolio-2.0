@@ -126,8 +126,8 @@ const toggleContrast = () => {
     contrastBtn.classList.toggle('active');
 };
 
-fontIncBtn.addEventListener('click', () => increaseFontSize());
-fontDecBtn.addEventListener('click', () => decreaseFontSize());
-grayScaleBtn.addEventListener('click', () => toggleGreyScale());
-contrastBtn.addEventListener('click', () => toggleContrast());
-darkModeBtn.addEventListener('click', () => toggleDarkMode());
+fontIncBtn.addEventListener('click', increaseFontSize);
+fontDecBtn.addEventListener('click', decreaseFontSize);
+grayScaleBtn.addEventListener('click', toggleGreyScale);
+contrastBtn.addEventListener('click', toggleContrast);
+darkModeBtn.addEventListener('click', toggleDarkMode);

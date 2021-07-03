@@ -23,10 +23,10 @@ body {
 }
 
 .light-global {
-  background-color: $lightMainBackground !important;
+    background-color: $lightMainBackground !important;
 }
 
-.light-text{
+.light-text {
     color: $lightMainTextColor !important;
 }
 
@@ -36,10 +36,16 @@ body {
 
 .high-contrast {
     filter: contrast(200%);
+    .about-background {
+        height: 8%;
+    }
 }
 
 .grayscale {
     filter: grayscale(100%);
+    .about-background {
+        height: 8%;
+    }
 }
 
 .no-border {
