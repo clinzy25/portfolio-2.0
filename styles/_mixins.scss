@@ -39,7 +39,8 @@
 }
 
 @mixin xlHeaderFont {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Exo', sans-serif;
+    letter-spacing: 10px;
     color: $accent1;
 }
 
