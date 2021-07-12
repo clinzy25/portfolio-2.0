@@ -17,6 +17,10 @@ const skillSection = document.querySelectorAll('.skill-section');
 const tabsContainer = document.querySelector('.tabs-container');
 const panel = document.querySelectorAll('.tab-content');
 const paradigmText = document.querySelectorAll('.tab-text');
+const projectsHeaderContainer = document.querySelector(
+    '.projects-header-container'
+);
+const projectsHeader = document.querySelector('.projects-header');
 const projectDescription = document.querySelectorAll('.project-description');
 const projectTitle = document.querySelectorAll('.project-title');
 const projectBtn = document.querySelectorAll('.project-btn');
@@ -97,6 +101,8 @@ const toggleDarkMode = () => {
     projectTitle.forEach((item) => {
         item.classList.toggle('light-text');
     });
+    projectsHeaderContainer.classList.toggle('projects-background-light');
+    projectsHeader.classList.toggle('projects-header-light');
     projectDescription.forEach((item) => {
         item.classList.toggle('light-text');
     });
