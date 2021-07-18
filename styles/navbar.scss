@@ -37,7 +37,6 @@
         padding: 0;
         .nav-link {
             padding: 0 20px;
-            border-left: 2px solid $secondaryTextColor;
         }
 
         .no-border {
@@ -85,6 +84,7 @@
             user-select: none;
             &:hover {
                 background-color: rgb(43, 43, 43);
+                color: $accent2;
                 .fas {
                     transform: scale(1.3);
                 }
@@ -95,7 +95,7 @@
             font-size: $smallIcon;
             color: $accent1;
             padding-right: 10px;
-            transition: all 0.2s ease; 
+            transition: all 0.2s ease;
         }
 
         &:before {
