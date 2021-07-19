@@ -37,17 +37,25 @@
     .project-title {
         @include headerFont();
         font-size: $largeHeader;
-        color: $accent1;
+        color: $mainTextColor;
         margin-top: 0;
+        .fas,
+        .fab {
+            margin-right: 15px;
+            color: $accent1;
+        }
+        span {
+          color: $accent1;
+        }
     }
 
     .project-text {
-      display: flex;
-      flex-direction: column;
-      margin: 0 $globalMargin;
-      max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 $globalMargin;
+        max-width: 700px;
     }
-    
+
     .project-description {
         color: $mainTextColor;
         letter-spacing: 1px;
