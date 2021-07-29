@@ -106,7 +106,7 @@
                     </p>
                     <h5>Relevant Courses</h5>
                     <p class="skill-text">
-                        User Interface Design | User Experience Design | Data Management & Database Design
+                        UI Design | UX Design | Data Management & Database Design | Software Engineering
                     </p>
                 </article>
                 <!-- Skills -->
@@ -121,12 +121,12 @@
                     </p>
                     <h5>Backend</h5>
                     <p class="skill-text">
-                        Node.js | Express | MongoDB | PostgreSQL | PHP | Firebase | REST | OAuth | Sockets | Stripe | Auth0
+                        Node.js | Express | MongoDB | PostgreSQL | PHP | C++ | Firebase | REST | OAuth | Sockets | Stripe | Auth0
                     </p>
                     <h5>Build Tools</h5>
                     <p class="skill-text">
                         Git / Github | NPM | Webpack | Jest | JSDoc | Typescript |
-                        CI / CD | Postman | Docker
+                        CI / CD | Postman | Docker | AWS EC2 / ECS
                     </p>
                     <h5>Soft Skills</h5>
                     <p class="skill-text">
@@ -175,7 +175,7 @@
                 <label for="tab-2" class="label">Humane</label>
                 <article class="tab-content">
                     <p class="tab-text">
-                         Exponential tech is driving an era of extreme change in society, and as stewards of this tech, we can use it to address the existential crises of our time by improving our collective problem solving capacity, and reinforcing the rationality and sense-making ability of democratic societies. For this we must create technologies that are <span class='text-accent'>sensitive to human nature</span>, and avoid addictive, manipulative, and exploitative design patterns.
+                         Exponential tech is driving an era of extreme change in society, and as stewards of this tech, we can use it to address the existential crises of our time by improving our collective problem solving capacity, and reinforcing the rationality and sense-making ability of democratic societies. For this we must create technologies that are <span class='text-accent'>sensitive to human nature</span>, and avoid addictive, manipulative, or exploitative design patterns.
                         
                     </p>
                 </article>
@@ -199,7 +199,7 @@
                 <label for="tab-4" class="label">Readable</label>
                 <article class="tab-content">
                     <p class="tab-text">
-                      I aim to find straightforward, <span class='text-accent'>simple solutions to complex problems</span>, and document them with consistent formatting using JSDoc. In a team setting, code readability can make or break a deadline. Over time, it reduces technical debt and improves the output of the team. 
+                      I aim to find straightforward, <span class='text-accent'>simple solutions to complex problems</span>, and document them consistently with JSDoc. One of the most important requirements for a program is that it be understandable to the people who write and maintain it. In a team setting, code readability can make or break a deadline. Over time, it reduces technical debt and improves the output of the team. 
                     </p>
                 </article>
                 <!-- Scalable -->
@@ -219,10 +219,12 @@
             <h1 class="projects-header">Projects</h1>
           </div>
             <div class="project" data-aos="fade-up">
-              <img src="./project-images/spacex.png" alt="Time Blocker" class="project-image">
+                <img src="./project-images/spacex.png" alt="Time Blocker" class="project-image">
               <div class="project-text">
                 <h2 class="project-title"><i class="fas fa-space-shuttle"></i>SpaceX Launch Tracking</h2>
-                <p class="project-description">A fun MERN stack project that uses the SpaceX API to show past and scheduled launches, also allows the user to schedule launches to exoplanets based on their stellar flux. If this stellar flux value falls within a range corresponding to the limits of a sun’s habitable zone (HZ), it meets one of the basic criteria for potential habitability, and may be scheduled for launch.</p>
+                <p class="project-description">A fun MERN stack project that uses the SpaceX API to show past and scheduled launches, also allows the user to schedule launches to exoplanets based on their stellar flux.</p>
+                <span class='what-i-learned border-fade'>What I learned:</span>
+                <p class="project-technologies border-fade">MVC architecture • API testing • Docker / EC2 deployment • Github workflows • REST best practices</p>
                 <div class="project-links">
                   <a
                       target="_blank"
@@ -245,6 +247,8 @@
               <div class="project-text">
                 <h2 class="project-title"><i class="fas fa-hourglass-start"></i>Time Blocker</h2>
                 <p class="project-description">A simple and effective time blocking application made with React. A highly interative application that fully utilizes the React's native state management hook useReducer. The application uses Auth0 authorization and Firebase for user data storage.</p>
+                <span class='what-i-learned border-fade'>What I learned:</span>
+                <p class="project-technologies border-fade">React render cycle • JS time and date solutions • Detailed state management • Building highly interative UIs</p>
                 <div class="project-links">
                   <a
                       target="_blank"
@@ -266,7 +270,9 @@
               <img src="./project-images/chat-app.png" alt="Chat App" class="project-image">
               <div class="project-text">
                 <h2 class="project-title"><i class="fas fa-comments"></i>Chat App</h2>
-                <p class="project-description">Realtime chat application powered by Socket.io with Node, Express, and PostgreSQL backend. React / Redux frontend. I added many features to this application as a part of an assessment, including a message-read status and cookie based JWT authentication. Socket security and efficiency was also improved, and a complete redesign of the login / register page. </p>
+                <p class="project-description">Realtime chat application powered by Socket.io with Node, Express, and PostgreSQL backend. React / Redux frontend. I added many features to this application as a part of an assessment in a team setting, including a message-read status and cookie based JWT authentication. Socket security and efficiency was also improved, as well as a complete redesign of the login / register page. </p>
+                <span class='what-i-learned border-fade'>What I learned:</span>
+                <p class="project-technologies border-fade">Socket.IO • JWT • Translating UI prototypes • Redux thunks • Sequelize ORM • Fullstack debugging • Redux devtools</p>
                 <div class="project-links">
                   <a
                       target="_blank"
@@ -289,27 +295,25 @@
               <div class="project-text">
                 <h2 class="project-title"><i class="fas fa-couch"></i>Comfy Sloth</h2>
                 <p class="project-description">A fully functional React storefront with Stripe payments and Auth0 authentication. Uses useReducer for state management and pulls products from an RESTful API. I converted this project to from useReducer to Redux to explore their differences.</p>
+                <span class='what-i-learned border-fade'>What I learned:</span>
+                <p class="project-technologies border-fade">SPA • React routing • Stripe payments • Auth0 • Flux state management</p>
                 <div class="project-links">
                   <a
                       target="_blank"
                       class="project-link"
                       href="https://comfy-sloth-cl.netlify.app/"
-                      ><button class="project-btn"><i class="fas fa-link">&nbsp;</i>Live</button></a
-                  >
+                      ><button class="project-btn"><i class="fas fa-link">&nbsp;</i>Live</button></a>
                   <a
                       target="_blank"
                       class="project-link"
                       href="https://github.com/clinzy25/react-ecommerce-site"
-                  >
-                      <button class="project-btn"><i class="fas fa-link">&nbsp;</i>Code</button>
-                  </a>
+                    ><button class="project-btn"><i class="fas fa-link">&nbsp;</i>Code</button></a>
                   <a
                     target="_blank"
                     class="project-link"
                     href="https://github.com/clinzy25/react-ecommerce-site-redux"
                     >
-                    <button class="project-btn"><i class="fas fa-link">&nbsp;</i>Redux Code</button>
-                  </a>
+                      <button class="project-btn"><i class="fas fa-link">&nbsp;</i>Redux Code</button></a>
                 </div>
               </div>
             </div>
@@ -317,8 +321,9 @@
               <img src="./project-images/github.png" alt="Github User Search" class="project-image">
               <div class="project-text">
                 <h2 class="project-title"><i class="fab fa-github-alt"></i>Github User Search</h2>
-                <p class="project-description">A React app that uses the Github API to search for users and
-                        aggregates their data onto Fusion Charts.</p>
+                <p class="project-description">A React app that uses the Github API to search for users and aggregates their data onto Fusion Charts.</p>
+                <span class='what-i-learned border-fade'>What I learned:</span>
+                <p class="project-technologies border-fade">Manipulating API data • Data visualization • React context API</p>
                 <div class="project-links">
                   <a
                       target="_blank"
@@ -341,6 +346,8 @@
               <div class="project-text">
                 <h2 class="project-title"><i class="fab fa-shopify"></i>Shopify Storefront</h2>
                 <p class="project-description">A headless React ecommerce site using the Shopify API. Styled with Chakra UI.</p>
+                <span class='what-i-learned border-fade'>What I learned:</span>
+                <p class="project-technologies border-fade">Shopify API • Headless architecture • Chakra UI</p>
                 <div class="project-links">
                   <a
                       target="_blank"
@@ -362,7 +369,9 @@
               <img src="./project-images/small-web.png" alt="Small Web Projects" class="project-image">
               <div class="project-text">
                 <h2 class="project-title"><i class="fab fa-js-square"></i></i>Small Web Projects</h2>
-                <p class="project-description">A collection of small-scale Javascript web projects.</p>
+                <p class="project-description">A collection of small-scale, vanilla Javascript web projects.</p>
+                <span class='what-i-learned border-fade'>What I learned:</span>
+                <p class="project-technologies border-fade">DOM manipulation • Developer resources • Working with various APIs • JSDoc</p>
                 <div class="project-links">
                   <a
                       target="_blank"
