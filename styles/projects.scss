@@ -67,24 +67,23 @@
         }
 
         .what-i-learned {
-            color: $secondaryTextColor;
+            color: $mainTextColor;
             width: min-content;
             white-space: nowrap;
             @include smallTextFont();
             padding-bottom: 9px;
-            border-bottom: 1px solid $secondaryTextColor;
+            border-bottom: 2px solid $secondaryTextColor;
         }
 
         .project-technologies {
-            color: $mainTextColor;
             letter-spacing: 1px;
             @include smallTextFont();
             color: $secondaryTextColor;
             font-size: 0.75rem;
             margin: 0px 0px 0px 20px;
             padding: 15px 0 15px 15px;
-            border-left: 1px solid $secondaryTextColor;
-            border-bottom: 1px solid $secondaryTextColor;
+            border-left: 2px solid $secondaryTextColor;
+            border-bottom: 2px solid $secondaryTextColor;
         }
 
         .border-fade {
