@@ -11,6 +11,7 @@ import './images/logo.png';
 import './images/metal-white.png';
 import './project-images/small-web.png';
 import './project-images/time-blocker.png';
+import './project-images/hearby.png';
 import './images/favicon.png';
 import './conner-linzy-resume.pdf';
 

@@ -1,2 +1,8 @@
 @use 'global';
+@use 'navbar.scss';
+@use 'about.scss';
+@use 'skills.scss';
+@use 'projects.scss';
+@use 'contact.scss';
+@use 'footer.scss';
 /*# sourceMappingURL=index.css.map */

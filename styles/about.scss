@@ -20,6 +20,7 @@
     .resume-btn {
         @include button();
         padding: 7px 30px;
+        margin-left: 0;
     }
 }
 

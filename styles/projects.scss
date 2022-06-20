@@ -34,23 +34,29 @@
         min-width: 350px;
         max-width: 1000px;
         transition: transform 0.3s ease;
-        &:hover {
-          transform: scale(1.04);
-        }
     }
 
     .project-title {
         @include headerFont();
         font-size: $largeHeader;
-        color: $mainTextColor;
+        color: $accent1;
         margin-top: 0;
+        border-bottom: 2px solid $secondaryTextColor;
+        padding-bottom: 7px;
     }
-
+    .border-fade {
+      border-image: linear-gradient(to right, $accent1, $mainBackground);
+      border-image-slice: 1;
+    }
     .project-text {
         display: flex;
         flex-direction: column;
         margin: 0 $globalMargin;
         max-width: 700px;
+        }
+        .area4-link {
+          color: $accent2;
+        }
 
         .project-description {
             color: $mainTextColor;
@@ -78,11 +84,6 @@
             border-bottom: 2px solid $secondaryTextColor;
         }
 
-        .border-fade {
-            border-image: linear-gradient(to right, $accent1, $mainBackground);
-            border-image-slice: 1;
-        }
-
         .project-links {
             padding-top: 30px;
             transition: transform ease-out 250ms;
@@ -93,14 +94,22 @@
             .project-btn {
                 @include button();
                 padding: 7px 30px;
-                border-color: $mainTextColor;
+                color: $accent1;
+                border-color: $accent1;
                 .fas {
                     &:hover {
                         color: #000;
                     }
                 }
             }
-        }
+            .live {
+              margin-left: 0;
+            }
+          }
+          .hearby-project-btn {
+              :hover {
+                background-color: #f9206e !important;
+              }
     }
 }
 
@@ -122,7 +131,6 @@
         }
     }
     .time-blocker,
-    .shopify-storefront,
     .comfy-sloth {
         order: 1;
     }

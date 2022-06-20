@@ -45,6 +45,12 @@
     }
 }
 
+.brackets {
+  color: $accent1;
+  font-size: 1.5rem;
+  margin-left: 25px;
+}
+
 // Accessibility Dropdown
 .dropdown-container {
     margin: $globalMargin;
@@ -250,7 +256,7 @@
         visibility: visible !important;
         top: 100vh;
         transform: translateY(-100vh);
-        #logo {
+        .brackets {
             display: none;
         }
 

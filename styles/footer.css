@@ -1,0 +1,43 @@
+#footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  background-color: #0a0a0a;
+}
+
+.metal {
+  height: 33px;
+  width: 33px;
+  margin: 20px;
+}
+
+#wcb {
+  position: absolute;
+  right: 0;
+  margin: 10px 10px 0 0;
+}
+
+.footer-text {
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #9da5b4;
+}
+
+@media only screen and (max-width: 800px) {
+  #wcb {
+    position: static;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

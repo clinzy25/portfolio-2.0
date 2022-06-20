@@ -1,0 +1,237 @@
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2500' height='700' preserveAspectRatio='none' viewBox='0 0 2500 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1058%26quot%3b)' fill='none'%3e%3crect width='2500' height='700' x='0' y='0' fill='rgba(18%2c 18%2c 18%2c 1)'%3e%3c/rect%3e%3cpath d='M1602.62 725.47C1787.19 721.57 1921.11 483.87 2296.44 472.65 2671.77 461.43 2799.19 158.37 2990.26 150.65' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1196.51 744.7C1391.59 728.14 1500.37 341.37 1860.8 329.99 2221.22 318.61 2354.99 183.86 2525.08 182.99' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M283.36 835.82C528.4 813.57 682.77 307.75 1111.44 303.91 1540.11 300.07 1525.48 391.41 1939.51 391.41 2353.55 391.41 2559.42 304.03 2767.59 303.91' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1051.15 804.02C1204.87 787.81 1176.58 454.85 1561.26 454.63 1945.93 454.41 2322.08 642.84 2581.47 643.63' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M711.43 710.22C877.25 702.96 835.59 432.05 1310.3 423.59 1785.02 415.13 2197.54 97.56 2508.05 94.59' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1058'%3e%3crect width='2500' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.contact-container .form-header {
+  font-family: 'Exo', sans-serif;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  margin: 25px;
+  color: #6dd69b;
+}
+
+.contact-container .open-to-work {
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 2px;
+  color: #9da5b4;
+  margin: 25px;
+  text-align: center;
+}
+
+.contact-container .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-container .social-icons .fab {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.contact-container .social-icons .fab:hover {
+  -webkit-filter: brightness(140%);
+          filter: brightness(140%);
+}
+
+.contact-container .social-icons .fa-github {
+  color: #d6d8da;
+  margin-left: 15px;
+}
+
+.contact-container .social-icons .fa-linkedin {
+  color: #0966c2;
+}
+
+.contact-container .social-icons .social-hr {
+  display: inline;
+  height: 1px;
+  background-color: #9da5b4;
+  width: 20vw;
+  max-width: 220px;
+  border: 0;
+}
+
+.light-contact-background {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2500' height='700' preserveAspectRatio='none' viewBox='0 0 2500 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1057%26quot%3b)' fill='none'%3e%3crect width='2500' height='700' x='0' y='0' fill='rgba(245%2c 245%2c 245%2c 1)'%3e%3c/rect%3e%3cpath d='M1602.62 725.47C1787.19 721.57 1921.11 483.87 2296.44 472.65 2671.77 461.43 2799.19 158.37 2990.26 150.65' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1196.51 744.7C1391.59 728.14 1500.37 341.37 1860.8 329.99 2221.22 318.61 2354.99 183.86 2525.08 182.99' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M283.36 835.82C528.4 813.57 682.77 307.75 1111.44 303.91 1540.11 300.07 1525.48 391.41 1939.51 391.41 2353.55 391.41 2559.42 304.03 2767.59 303.91' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1051.15 804.02C1204.87 787.81 1176.58 454.85 1561.26 454.63 1945.93 454.41 2322.08 642.84 2581.47 643.63' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M711.43 710.22C877.25 702.96 835.59 432.05 1310.3 423.59 1785.02 415.13 2197.54 97.56 2508.05 94.59' stroke='rgba(108%2c 172%2c 203%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1057'%3e%3crect width='2500' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+
+#contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  height: 500px;
+  margin-top: 50px;
+}
+
+#contact-form .form-input,
+#contact-form .text-area {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #9da5b4;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #0a0a0a;
+}
+
+#contact-form .form-input::-webkit-input-placeholder,
+#contact-form .text-area::-webkit-input-placeholder {
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #9da5b4;
+  letter-spacing: 1px;
+}
+
+#contact-form .form-input:-ms-input-placeholder,
+#contact-form .text-area:-ms-input-placeholder {
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #9da5b4;
+  letter-spacing: 1px;
+}
+
+#contact-form .form-input::-ms-input-placeholder,
+#contact-form .text-area::-ms-input-placeholder {
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #9da5b4;
+  letter-spacing: 1px;
+}
+
+#contact-form .form-input::placeholder,
+#contact-form .text-area::placeholder {
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #9da5b4;
+  letter-spacing: 1px;
+}
+
+#contact-form .form-input:focus,
+#contact-form .text-area:focus {
+  outline: 1px solid #9da5b4;
+}
+
+#contact-form .form-input {
+  height: 40px;
+}
+
+#contact-form .text-area {
+  height: 300px;
+  resize: none;
+}
+
+#contact-form .form-border {
+  border: 1px solid #181818;
+}
+
+#contact-form .submit-btn {
+  font-family: 'Exo', sans-serif;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+  color: #f5f5f5;
+  border: 1px solid #9da5b4;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+  margin: 5px;
+  border-radius: 25px;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50%;
+  font-family: 'Exo', sans-serif;
+  letter-spacing: 3px;
+  cursor: pointer;
+  margin-top: 40px;
+  padding: 10px 50px;
+}
+
+#contact-form .submit-btn:hover, #contact-form .submit-btn:active {
+  background: #6dd69b;
+  color: #000;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
+          box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
+}
+
+@media only screen and (max-width: 800px) {
+  #contact-form {
+    width: 90%;
+    margin: 50px 0 200px 0;
+  }
+  #contact-form .form-input {
+    height: 55px;
+  }
+  #contact-form .form-input,
+  #contact-form .text-area {
+    font-size: 1rem;
+  }
+  #contact-form .form-input::-webkit-input-placeholder,
+  #contact-form .text-area::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  #contact-form .form-input:-ms-input-placeholder,
+  #contact-form .text-area:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  #contact-form .form-input::-ms-input-placeholder,
+  #contact-form .text-area::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  #contact-form .form-input::placeholder,
+  #contact-form .text-area::placeholder {
+    font-size: 1rem;
+  }
+  #contact-form .submit-btn {
+    background-color: #6dd69b;
+    color: #000;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .contact-container {
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
