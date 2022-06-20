@@ -48,6 +48,13 @@
         margin: 5px 0;
         color: $mainTextColor;
         line-height: 25px;
+        a {
+          color: $accent2;
+          display: inline-block;
+          &:hover {
+            color: $mainTextColor;
+          }
+        }
     }
 }
 
