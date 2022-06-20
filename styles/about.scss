@@ -11,6 +11,15 @@
     @include smallTextFont();
     font-size: $largeText;
     color: $mainTextColor;
+    .area4-link {
+          color: $accent2;
+          text-decoration: none;
+          display: inline-block;
+          padding-right: 0;
+          &:hover {
+            color: white;
+          }
+        }
     #conner-linzy {
         display: inline-block;
         font-family: 'Kanit', sans-serif;

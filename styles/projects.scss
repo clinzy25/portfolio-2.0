@@ -39,7 +39,7 @@
     .project-title {
         @include headerFont();
         font-size: $largeHeader;
-        color: $accent1;
+        color: $mainTextColor;
         margin-top: 0;
         border-bottom: 2px solid $secondaryTextColor;
         padding-bottom: 7px;
@@ -56,6 +56,8 @@
         }
         .area4-link {
           color: $accent2;
+          display: inline-block;
+          padding-right: 0;
         }
 
         .project-description {
@@ -105,11 +107,6 @@
             .live {
               margin-left: 0;
             }
-          }
-          .hearby-project-btn {
-              :hover {
-                background-color: #f9206e !important;
-              }
     }
 }
 
